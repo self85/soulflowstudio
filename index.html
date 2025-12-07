@@ -10,8 +10,47 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Hover dropdown functionality */
+            .dropdown:hover .dropdown-menu {
+                display: block !important;
+            }
+            
+            .dropdown-menu {
+                margin-top: 0;
+                background-color: #8B7355 !important;
+                border: 1px solid #2F170F;
+                border-radius: 0.5rem;
+                box-shadow: 0 0.5rem 1rem rgba(47, 23, 15, 0.15);
+            }
+            
+            .dropdown-item {
+                color: #FAF0E6 !important;
+                font-weight: 600;
+                padding: 0.5rem 1rem;
+                transition: all 0.3s ease;
+            }
+            
+            .dropdown-item:hover,
+            .dropdown-item:focus {
+                background-color: #e6a756 !important;
+                color: #2F170F !important;
+            }
+            
+            .dropdown-divider {
+                border-top: 1px solid #2F170F;
+                margin: 0.25rem 0;
+            }
+            
+            /* Ensure dropdown stays visible when hovering over menu items */
+            .dropdown-toggle::after {
+                display: inline-block !important;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -27,14 +66,27 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Services</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Contact</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#home">Home</a></li>
+                        <li class="nav-item dropdown px-lg-4">
+                            <a class="nav-link dropdown-toggle text-uppercase" href="#services" id="servicesDropdown" role="button" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#services">All Services</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#life-force-activation">Life Force Activation</a></li>
+                                <li><a class="dropdown-item" href="#spinal-energetics">Spinal Energetics</a></li>
+                                <li><a class="dropdown-item" href="#breathwork">Breathwork</a></li>
+                                <li><a class="dropdown-item" href="#reiki-healing">Reiki Healing</a></li>
+                                <li><a class="dropdown-item" href="#cacao-ceremonies">Cacao Ceremonies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <section class="page-section clearfix">
+        <section class="page-section clearfix" id="home">
             <div class="container">
                 <div class="intro">
                     <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
@@ -49,6 +101,93 @@
                 </div>
             </div>
         </section>
+        <!-- Services Section -->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading">
+                        <span class="section-heading-upper text-primary mb-3">Transformational Modalities</span>
+                        <span class="section-heading-lower">Our Services</span>
+                    </h2>
+                </div>
+                
+                <!-- Life Force Activation -->
+                <div class="product-item mb-5" id="life-force-activation">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-lower">Life Force Activation</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/life-force-activation.jpg" alt="Life Force Activation Session" />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-4">Awaken your inner vitality through our transformative Life Force Activation sessions. These powerful healing experiences help you release energetic blockages, restore balance, and reconnect with your authentic self. Through ancient wisdom and modern techniques, we guide you on a journey of deep transformation that revitalizes your mind, body, and spirit. Each session is uniquely tailored to your needs, creating a sacred space for profound healing and personal growth.</p><p class="mb-4">I offer both 1:1 and group sessions.</p><div class="d-flex flex-wrap gap-3 align-items-center"><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/vcRfLGXP0qsJWEBpa0C6">Book Your Private Session ONLINE</a></div><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1">Book Your Group Session ONLINE</a></div><div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="life-force-activation-details.html">Read More</a></div></div></div>
+                    </div>
+                </div>
+                
+                <!-- Spinal Energetics -->
+                <div class="product-item mb-5" id="spinal-energetics">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex me-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-lower">Spinal Energetics</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" />
+                    <div class="product-item-description d-flex ms-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-4">Experience the profound healing power of Spinal Energetics, a revolutionary modality that works with your body's natural intelligence to release stored tension and trauma. This gentle yet powerful approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</p><p class="mb-4">Available in both individual sessions and special package deals for deeper transformation.</p><div class="d-flex flex-wrap gap-3 align-items-center"><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy">Book Private Session ONLINE</a></div><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/eFjbw7LFYKjIsxR8hpx8">3 Session Package ONLINE</a></div><div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="spinal-energetics-details.html">Read More</a></div></div></div>
+                    </div>
+                </div>
+                
+                <!-- Breathwork -->
+                <div class="product-item mb-5" id="breathwork">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-lower">Breathwork</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/breathwork.jpg" alt="Breathwork Session" />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-4">Transform your life through the ancient art of conscious breathing. Our breathwork sessions guide you into deeper states of awareness, helping you release emotional blockages, reduce stress, and connect with your inner wisdom. Using powerful breathing techniques, you'll experience profound shifts in consciousness that promote healing, clarity, and spiritual awakening. Each session creates a safe container for transformation and self-discovery.</p><p class="mb-4">Join us for individual sessions or group circles to explore the healing power of breath.</p><div class="d-flex flex-wrap gap-3 align-items-center"><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/fY4ZKrPEe7KEE8u728Y1">Book Private Session ONLINE</a></div><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1">Book Group Session ONLINE</a></div><div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="breathwork-details.html">Read More</a></div></div></div>
+                    </div>
+                </div>
+                
+                <!-- Reiki Healing -->
+                <div class="product-item mb-5" id="reiki-healing">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex me-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-lower">Reiki Healing</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" />
+                    <div class="product-item-description d-flex ms-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-4">Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being.</p><p class="mb-4">Perfect for those seeking gentle healing and energetic balance through this time-honored modality.</p><div class="d-flex flex-wrap gap-3 align-items-center"><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY">Book Private Session ONLINE</a></div><div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="reiki-healing-details.html">Read More</a></div></div></div>
+                    </div>
+                </div>
+                
+                <!-- Cacao Ceremonies -->
+                <div class="product-item mb-5" id="cacao-ceremonies">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-lower">Cacao Ceremonies</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-4">Join us for sacred cacao ceremonies that honor this ancient plant medicine traditionally used by indigenous cultures for spiritual connection and heart opening. Our ceremonial-grade cacao facilitates deep introspection, emotional release, and community bonding in a safe, supportive environment. These transformative gatherings combine meditation, intention setting, and the gentle guidance of mama cacao.</p><p class="mb-4">Experience the heart-opening medicine of cacao in our sacred ceremony circles.</p><div class="d-flex gap-3"><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/activities/vcRfLGXP0qsJWEBpa0C6">Book Private Ceremony ONLINE</a></div><div class="intro-button"><a class="btn btn-primary btn-xl" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1">Join Group Ceremony ONLINE</a></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="page-section cta">
             <div class="container">
                 <div class="row">
@@ -60,14 +199,52 @@
                             </h2>
                             <p class="mb-4">Experience healing from the comfort of your own space with our online sessions. Whether you prefer individual 1:1 sessions for personalized attention or group sessions for shared energy, we offer both private sessions and special package deals to support your healing journey.</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn btn-primary btn-lg" href="products.html">Book Your Session</a>
-                                <a class="btn btn-outline-primary btn-lg" href="store.html">Contact Us</a>
+                                <a class="btn btn-primary btn-lg" href="#services">Explore Our Services</a>
+                                <a class="btn btn-outline-primary btn-lg" href="#contact">Contact Us</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        
+        <!-- Contact Section -->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h1 class="section-heading mb-5">
+                                <span class="section-heading-lower">Connect With Us</span>
+                            </h1>
+                            <p class="mb-3">
+                                <small><em>Email me</em></small>
+                                <br />
+                                <a href="mailto:lina.w.love@gmail.com" class="btn btn-outline-primary btn-sm">
+                                    lina.w.love@gmail.com
+                                </a>
+                            </p>
+                            <p class="mb-3">
+                                <small><em>Or message me on WhatsApp</em></small>
+                                <br />
+                                <a href="https://wa.me/46702956514" class="btn btn-success btn-sm" target="_blank">
+                                    WhatsApp: +46 70 295 65 14
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <small><em>Stay connected with our community</em></small>
+                                <br />
+                                <a href="https://chat.whatsapp.com/HNXZ2CZYXxYFR9FMo2dBQt" class="btn btn-primary btn-sm mt-2" target="_blank">
+                                    Join Our Healing Community
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
@@ -75,5 +252,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Instagram Embed JS-->
+        <script async src="//www.instagram.com/embed.js"></script>
     </body>
 </html>
