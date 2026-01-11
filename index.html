@@ -82,7 +82,7 @@
             }
             
             #services .section-heading-lower {
-                color: #8B4513 !important; /* Same as Soulflow Studio */
+                color: #8B4513 !important; /* Same as Soulrise Studio */
             }
             
             /* Add more spacing between intro heading lines */
@@ -264,14 +264,14 @@
                 padding-bottom: 3rem;
             }
 
-            /* Spinal Energetics text color same as Soulflow Studio */
+            /* Spinal Energetics text color same as Soulrise Studio */
             #spinal-energetics .section-heading-lower {
-                color: #8B4513 !important; /* Same as text-faded/Soulflow Studio */
+                color: #8B4513 !important; /* Same as text-faded/Soulrise Studio */
             }
 
-            /* Reiki Healing text color same as Soulflow Studio */
+            /* Reiki Healing text color same as Soulrise Studio */
             #reiki-healing .section-heading-lower {
-                color: #8B4513 !important; /* Same as text-faded/Soulflow Studio */
+                color: #8B4513 !important; /* Same as text-faded/Soulrise Studio */
             }
 
             /* Source Transmission text color to header color */
@@ -290,22 +290,36 @@
                 color: #F0E6D2 !important; /* Header background color */
             }
             
+            /* Sticky navigation only */
+            #mainNav {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1000 !important;
+            }
+            
+            /* Mobile navbar brand visibility */
+            @media (max-width: 991.98px) {
+                #navbarBrand {
+                    opacity: 1 !important; /* Always show on mobile */
+                }
+            }
+            
         </style>
     </head>
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">awaken your life force</span>
-                <span class="site-heading-lower">Soulflow Studio</span>
+                <span class="site-heading-lower">Soulrise Studio</span>
             </h1>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#home" data-en="Home" data-sv="Hem">Home</a></li>
                         <li class="nav-item dropdown px-lg-4">
                             <a class="nav-link dropdown-toggle text-uppercase" href="#services" id="servicesDropdown" role="button" aria-expanded="false" data-en="Services" data-sv="Tjänster">
@@ -335,10 +349,12 @@
             </div>
         </nav>
         <section class="page-section clearfix" id="home">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
-                    <div class="intro-text left-0 text-center p-5 rounded" style="background-color: #F0E6D2;">
+            <!-- Full width image -->
+            <div class="w-100 position-relative">
+                <img class="intro-img img-fluid w-100" src="assets/img/intro.jpg" alt="..." style="height: 60vh; object-fit: cover;" />
+                <!-- Text overlay positioned over the image -->
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <div class="intro-text text-center p-5 rounded" style="background-color: rgba(240, 230, 210, 0.9); max-width: 800px;">
                         <h2 class="section-heading mb-4">
                             <span class="section-heading-lower">Your Journey Awaits</span>
                         </h2>
@@ -348,6 +364,113 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Packages Section -->
+        <section class="page-section" id="packages" style="padding: 5rem 0; background-color: #F0E6D2;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading">
+                        <span class="section-heading-upper" data-en="Choose Your Path" data-sv="Välj din väg">Choose Your Path</span>
+                        <span class="section-heading-lower" data-en="Transformation Packages" data-sv="Transformationspaket">Transformation Packages</span>
+                    </h2>
+                    <p class="lead text-muted mt-3" data-en="Three powerful ways to embark on your healing journey" data-sv="Tre kraftfulla sätt att påbörja din läkningsresa">Three powerful ways to embark on your healing journey</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Package 1: 8-Week Personal Journey -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-header text-center" style="background-color: #a69073; color: white;">
+                                <h4 class="mb-0" data-en="Personal Journey" data-sv="Personlig resa">Personal Journey</h4>
+                                <small data-en="1-on-1 Intensive" data-sv="1-till-1 Intensiv">1-on-1 Intensive</small>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 fw-bold text-primary mb-2">8</div>
+                                <p class="text-muted mb-3" data-en="weeks" data-sv="veckor">weeks</p>
+                                <h5 class="mb-3" data-en="Work with me personally" data-sv="Jobba med mig personligt">Work with me personally</h5>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2">✓ <span data-en="Weekly 1-on-1 sessions" data-sv="Veckovisa 1-till-1 sessioner">Weekly 1-on-1 sessions</span></li>
+                                    <li class="mb-2">✓ <span data-en="Personalized healing plan" data-sv="Personlig läkningsplan">Personalized healing plan</span></li>
+                                    <li class="mb-2">✓ <span data-en="Multiple modalities included" data-sv="Flera modaliteter inkluderade">Multiple modalities included</span></li>
+                                    <li class="mb-2">✓ <span data-en="WhatsApp support" data-sv="WhatsApp support">WhatsApp support</span></li>
+                                    <li class="mb-2">✓ <span data-en="Integration guidance" data-sv="Integrationsvägledning">Integration guidance</span></li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 bg-transparent text-center">
+                                <a href="mailto:lina.w.love@gmail.com?subject=8-Week Personal Journey&body=Hi Lina,%0A%0AI'm interested in the 8-week Personal Journey package. Could you send me more details about pricing and availability?%0A%0AThank you!" class="btn btn-primary btn-lg">
+                                    <span data-en="Get Details" data-sv="Få detaljer">Get Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 2: 8-Week Group Journey -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm position-relative">
+                            <div class="badge bg-warning position-absolute top-0 start-50 translate-middle px-3 py-2" style="z-index: 1;">
+                                <span data-en="Most Popular" data-sv="Populäraste">Most Popular</span>
+                            </div>
+                            <div class="card-header text-center" style="background-color: #6b7c5d; color: white;">
+                                <h4 class="mb-0" data-en="Group Journey" data-sv="Gruppresa">Group Journey</h4>
+                                <small data-en="Collective Healing" data-sv="Kollektiv läkning">Collective Healing</small>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 fw-bold text-primary mb-2">8</div>
+                                <p class="text-muted mb-3" data-en="weeks" data-sv="veckor">weeks</p>
+                                <h5 class="mb-3" data-en="Journey with like-minded souls" data-sv="Resa med likasinnade själar">Journey with like-minded souls</h5>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2">✓ <span data-en="Weekly group sessions" data-sv="Veckovisa gruppsessioner">Weekly group sessions</span></li>
+                                    <li class="mb-2">✓ <span data-en="Supportive community" data-sv="Stödjande gemenskap">Supportive community</span></li>
+                                    <li class="mb-2">✓ <span data-en="Shared healing energy" data-sv="Delad läkningsenergi">Shared healing energy</span></li>
+                                    <li class="mb-2">✓ <span data-en="Group WhatsApp chat" data-sv="Grupp WhatsApp chat">Group WhatsApp chat</span></li>
+                                    <li class="mb-2">✓ <span data-en="Monthly 1-on-1 check-in" data-sv="Månatlig 1-till-1 check-in">Monthly 1-on-1 check-in</span></li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 bg-transparent text-center">
+                                <a href="mailto:lina.w.love@gmail.com?subject=8-Week Group Journey&body=Hi Lina,%0A%0AI'm interested in joining the 8-week Group Journey. When does the next group start?%0A%0AThank you!" class="btn btn-primary btn-lg">
+                                    <span data-en="Join Next Group" data-sv="Gå med i nästa grupp">Join Next Group</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 3: Session Package (Klippkort) -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-header text-center" style="background-color: #8B7355; color: white;">
+                                <h4 class="mb-0" data-en="Session Package" data-sv="Sessionskort">Session Package</h4>
+                                <small data-en="Flexible Healing" data-sv="Flexibel läkning">Flexible Healing</small>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 fw-bold text-primary mb-2">5</div>
+                                <p class="text-muted mb-3" data-en="sessions" data-sv="sessioner">sessions</p>
+                                <h5 class="mb-3" data-en="Use at your own pace" data-sv="Använd i din egen takt">Use at your own pace</h5>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2">✓ <span data-en="5 individual sessions" data-sv="5 individuella sessioner">5 individual sessions</span></li>
+                                    <li class="mb-2">✓ <span data-en="Choose any modality" data-sv="Välj valfri modalitet">Choose any modality</span></li>
+                                    <li class="mb-2">✓ <span data-en="Valid for 6 months" data-sv="Giltigt i 6 månader">Valid for 6 months</span></li>
+                                    <li class="mb-2">✓ <span data-en="Book when it suits you" data-sv="Boka när det passar dig">Book when it suits you</span></li>
+                                    <li class="mb-2">✓ <span data-en="Special package price" data-sv="Specialpris för paket">Special package price</span></li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 bg-transparent text-center">
+                                <a href="mailto:lina.w.love@gmail.com?subject=5-Session Package&body=Hi Lina,%0A%0AI'm interested in the 5-session package. Could you send me the pricing and booking details?%0A%0AThank you!" class="btn btn-primary btn-lg">
+                                    <span data-en="Get Package" data-sv="Få paket">Get Package</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <p class="lead text-muted mb-3" data-en="Not sure which path is right for you?" data-sv="Osäker på vilken väg som är rätt för dig?">Not sure which path is right for you?</p>
+                    <a href="mailto:lina.w.love@gmail.com?subject=Free Consultation&body=Hi Lina,%0A%0AI'd love to schedule a free consultation to discuss which package would be best for my healing journey.%0A%0AThank you!" class="btn btn-outline-primary btn-lg">
+                        <span data-en="Book Free Consultation" data-sv="Boka gratis konsultation">Book Free Consultation</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
         <!-- Services Section -->
         <section class="page-section" id="services" style="padding-top: 0;">
             <div class="container">
@@ -512,7 +635,7 @@
                         <i class="fab fa-instagram" style="font-size: 2rem; color: #e6a756;"></i>
                     </a>
                 </div>
-                <p class="m-0 small">Copyright &copy; Soulflow Studio 2023</p>
+                <p class="m-0 small">Copyright &copy; Soulrise Studio 2023</p>
             </div>
         </footer>
         <!-- Bootstrap core JS-->
@@ -562,6 +685,29 @@
                     updateLanguageDisplay();
                     applyTranslations();
                 });
+                
+                // Navbar brand visibility based on header visibility
+                const header = document.querySelector('header');
+                const navbarBrand = document.getElementById('navbarBrand');
+                
+                function handleScroll() {
+                    const headerRect = header.getBoundingClientRect();
+                    const headerVisible = headerRect.bottom > 0;
+                    
+                    if (headerVisible) {
+                        // Header is visible, hide navbar brand
+                        navbarBrand.style.opacity = '0';
+                    } else {
+                        // Header is not visible, show navbar brand
+                        navbarBrand.style.opacity = '1';
+                    }
+                }
+                
+                // Listen for scroll events
+                window.addEventListener('scroll', handleScroll);
+                
+                // Initial check
+                handleScroll();
             });
         </script>
     </body>
