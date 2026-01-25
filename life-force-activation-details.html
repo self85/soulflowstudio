@@ -10,6 +10,8 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
@@ -49,6 +51,21 @@
                 display: inline-block !important;
             }
             
+            /* Language toggle button styling */
+            #languageToggle {
+                border-color: #e6a756;
+                color: #e6a756;
+                font-weight: 600;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            #languageToggle:hover {
+                background-color: #e6a756;
+                color: #000;
+                border-color: #e6a756;
+            }
+            
             /* Add spacing between intro heading lines */
             .intro-text .section-heading .section-heading-upper {
                 margin-bottom: 1.5rem;
@@ -63,16 +80,16 @@
         </style>
     </head>
     <body>
-        <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">awaken your life force</span>
-                <span class="site-heading-lower">Soulrise Studio</span>
+        <header style="padding-top: 0.5rem;">
+            <h1 class="site-heading text-center text-faded d-none d-lg-block" style="margin-bottom: 1rem;">
+                <span class="site-heading-upper text-primary mb-2" style="font-size: 1.2rem;">awaken your life force</span>
+                <span class="site-heading-lower" style="font-size: 3.5rem;">Soulrise Studio</span>
             </h1>
         </header>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 sticky-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Soulrise Studio</a>
+                <a class="navbar-brand text-uppercase fw-bold" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
@@ -95,12 +112,11 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#contact">Contact</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <div class="language-toggle">
-                                <button id="langToggle" class="btn btn-outline-light btn-sm">
-                                    <span id="currentLang">EN</span>
-                                </button>
-                            </div>
+                        <li class="nav-item px-lg-4">
+                            <button id="languageToggle" class="btn btn-outline-light">
+                                <i class="fas fa-globe me-2"></i>
+                                <span id="langText">Svenska</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +128,7 @@
             <div class="container">
                 <div class="intro">
                     <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/life-force-activation.jpg" alt="Life Force Activation Session" />
-                    <div class="intro-text left-0 text-center p-5 rounded" style="background-color: #a69073; color: white; max-width: 800px; width: 100%;">
+                    <div class="intro-text left-0 text-center p-5 rounded" style="background-color: #F0E6D2; max-width: 800px; width: 100%;">
                         <h2 class="section-heading mb-4">
                             <span class="section-heading-lower" style="white-space: nowrap;">Source Transmission - Life Force Activation</span>
                         </h2>
@@ -133,7 +149,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="p-5 rounded" style="background-color: #a69073; color: white;">
+                        <div class="p-5 rounded" style="background-color: #F0E6D2;">
                             <p class="mb-4"><span data-en="This is an intuitive, experience-based practice designed to awaken something deep within you - helping you remember who you truly are beyond conditioned patterns and limitations. The gentle yet powerful activation works by gradually building energy in a way that honors your system's capacity, ensuring you receive exactly what you need without overwhelming your nervous system." data-sv="Detta är en intuitiv, upplevelsebaserad praktik utformad för att väcka något djupt inom dig - hjälpa dig att komma ihåg vem du verkligen är bortom betingade mönster och begränsningar. Den mjuka men kraftfulla aktiveringen fungerar genom att gradvis bygga upp energi på ett sätt som respekterar ditt systems kapacitet, vilket säkerställer att du får exakt vad du behöver utan att överväldiga ditt nervsystem.">This is an intuitive, experience-based practice designed to awaken something deep within you - helping you remember who you truly are beyond conditioned patterns and limitations. The gentle yet powerful activation works by gradually building energy in a way that honors your system's capacity, ensuring you receive exactly what you need without overwhelming your nervous system.</span></p>
                             
                             <p class="mb-4"><span data-en="As energy begins to flow more freely through your body, you naturally reconnect with your authentic essence while releasing old patterns and beliefs that no longer serve your highest good. What matters most isn't what happens during the session on the table, but the profound transformation that continues to unfold in your daily life afterward." data-sv="När energin börjar flöda friare genom din kropp återansluter du naturligt med din autentiska essens samtidigt som du släpper gamla mönster och övertygelser som inte längre tjänar ditt högsta bästa. Det som betyder mest är inte vad som händer under sessionen på bordet, utan den djupa transformation som fortsätter att utvecklas i ditt dagliga liv efteråt.">As energy begins to flow more freely through your body, you naturally reconnect with your authentic essence while releasing old patterns and beliefs that no longer serve your highest good. What matters most isn't what happens during the session on the table, but the profound transformation that continues to unfold in your daily life afterward.</span></p>
@@ -155,7 +171,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="p-4 rounded" style="background-color: #a69073; color: white;">
+                        <div class="p-4 rounded" style="background-color: #F0E6D2;">
                             <ul>
                                 <li><span data-en="Awakens and strengthens your life force energy" data-sv="Väcker och stärker din livskraftsenergi">Awakens and strengthens your life force energy</span></li>
                                 <li><span data-en="Supports emotional release and stress reduction" data-sv="Stödjer emotionell frigörelse och stressreduktion">Supports emotional release and stress reduction</span></li>
@@ -179,7 +195,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="p-5 rounded" style="background-color: #a69073; color: white;">
+                        <div class="p-5 rounded" style="background-color: #F0E6D2;">
                             <p class="mb-0"><span data-en="Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment." data-sv="Energin är inte bunden till tid eller rum, vilket gör att sessionen även kan upplevas ONLINE. Ett perfekt alternativ när du inte kan eller hinner ta dig iväg till en studio, eller tycker det är lättare att slappna av i din egen hemmiljö.">Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment.</span></p>
                         </div>
                     </div>
@@ -197,7 +213,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="p-5 rounded" style="background-color: #a69073; color: white;">
+                        <div class="p-5 rounded" style="background-color: #F0E6D2;">
                             <h4 class="text-primary mb-3"><span data-en="Before Your Session" data-sv="Innan din session">Before Your Session</span></h4>
                             <p class="mb-4"><span data-en="We'll begin with a short introduction. Please wear comfortable clothing and come with an open mind and heart." data-sv="Vi börjar med en kort introduktion. Bär bekväma kläder och kom med ett öppet sinne och hjärta.">We'll begin with a short introduction. Please wear comfortable clothing and come with an open mind and heart.</span></p>
                             
@@ -240,7 +256,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner text-center rounded" style="background-color: #a69073; color: white;">
+                        <div class="cta-inner text-center rounded" style="background-color: #F0E6D2;">
                             <h2 class="section-heading mb-4">
                                 <span class="section-heading-upper"><span data-en="Ready to Begin?" data-sv="Redo att börja?">Ready to Begin?</span></span>
                                 <span class="section-heading-lower"><span data-en="Book Your Session" data-sv="Boka din session">Book Your Session</span></span>
@@ -269,45 +285,64 @@
             // Language switching functionality with persistence
             let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
             
-            const translations = {
-                en: {
-                    currentLang: 'EN'
-                },
-                sv: {
-                    currentLang: 'SV'
-                }
-            };
-            
-            function updateLanguageDisplay() {
-                document.getElementById('currentLang').textContent = translations[currentLanguage].currentLang;
-            }
-            
-            function toggleLanguage() {
-                currentLanguage = currentLanguage === 'en' ? 'sv' : 'en';
-                localStorage.setItem('selectedLanguage', currentLanguage);
-                updateLanguageDisplay();
-                
-                // Apply translations to elements with data-en and data-sv attributes
-                document.querySelectorAll('[data-en]').forEach(element => {
-                    if (element.hasAttribute('data-' + currentLanguage)) {
-                        element.textContent = element.getAttribute('data-' + currentLanguage);
-                    }
-                });
-            }
-            
-            // Initialize on page load
             document.addEventListener('DOMContentLoaded', function() {
-                updateLanguageDisplay();
+                const languageToggle = document.getElementById('languageToggle');
+                const langText = document.getElementById('langText');
                 
-                // Apply initial language
-                document.querySelectorAll('[data-en]').forEach(element => {
-                    if (element.hasAttribute('data-' + currentLanguage)) {
-                        element.textContent = element.getAttribute('data-' + currentLanguage);
-                    }
+                // Function to update language display
+                function updateLanguageDisplay() {
+                    langText.textContent = currentLanguage === 'en' ? 'Svenska' : 'English';
+                }
+                
+                // Function to apply translations
+                function applyTranslations() {
+                    const elementsWithTranslation = document.querySelectorAll('[data-en][data-sv]');
+                    elementsWithTranslation.forEach(element => {
+                        const newText = element.getAttribute('data-' + currentLanguage);
+                        if (newText) {
+                            element.textContent = newText;
+                        }
+                    });
+                }
+                
+                // Initialize on page load
+                updateLanguageDisplay();
+                applyTranslations();
+                
+                languageToggle.addEventListener('click', function() {
+                    // Toggle language
+                    currentLanguage = currentLanguage === 'en' ? 'sv' : 'en';
+                    
+                    // Save to localStorage
+                    localStorage.setItem('selectedLanguage', currentLanguage);
+                    
+                    // Update display and apply translations
+                    updateLanguageDisplay();
+                    applyTranslations();
                 });
                 
-                // Add event listener to toggle button
-                document.getElementById('langToggle').addEventListener('click', toggleLanguage);
+                // Navbar brand visibility based on header visibility
+                const header = document.querySelector('header');
+                const navbarBrand = document.getElementById('navbarBrand');
+                
+                function handleScroll() {
+                    const headerRect = header.getBoundingClientRect();
+                    const headerVisible = headerRect.bottom > 0;
+                    
+                    if (headerVisible) {
+                        // Header is visible, hide navbar brand
+                        navbarBrand.style.opacity = '0';
+                    } else {
+                        // Header is not visible, show navbar brand
+                        navbarBrand.style.opacity = '1';
+                    }
+                }
+                
+                // Add scroll event listener
+                window.addEventListener('scroll', handleScroll);
+                
+                // Initial check
+                handleScroll();
             });
         </script>
     </body>
