@@ -292,13 +292,141 @@
                 /* Add top padding to home section on mobile only */
                 #home {
                     padding-top: 6rem !important;
+                    background-color: #F0E6D2 !important;
+                }
+            }
+            
+            
+            /* Mobile layout for services - convert full-width sections to standard layout */
+            @media (max-width: 768px) {
+                /* Convert all full-width service sections to mobile layout */
+                #life-force-activation, 
+                #spinal-energetics, 
+                #breathwork, 
+                #reiki-healing, 
+                #cacao-ceremonies {
+                    margin-top: 0 !important;
+                    margin-bottom: 3rem !important;
+                    position: static !important;
+                    padding: 0 15px !important;
+                }
+                
+                /* Reset background styling for mobile */
+                #life-force-activation::before,
+                #spinal-energetics::before,
+                #breathwork::before,
+                #reiki-healing::before,
+                #cacao-ceremonies::before {
+                    display: none !important;
+                }
+                
+                #life-force-activation .w-100,
+                #spinal-energetics .w-100,
+                #breathwork .w-100,
+                #reiki-healing .w-100,
+                #cacao-ceremonies .w-100 {
+                    position: static !important;
+                    width: 100% !important;
+                    margin-bottom: 0 !important;
+                    margin-top: 0 !important;
+                }
+                
+                #life-force-activation img,
+                #spinal-energetics img,
+                #breathwork img,
+                #reiki-healing img,
+                #cacao-ceremonies img {
+                    height: 200px !important;
+                    width: 100% !important;
+                    border-radius: 0.5rem !important;
+                    object-fit: cover !important;
+                }
+                
+                /* Hide title overlays on mobile */
+                #life-force-activation .position-absolute:first-of-type,
+                #spinal-energetics .position-absolute:first-of-type,
+                #breathwork .position-absolute:first-of-type,
+                #reiki-healing .position-absolute:first-of-type,
+                #cacao-ceremonies .position-absolute:first-of-type {
+                    display: none !important;
+                }
+                
+                /* Hide desktop title overlays on mobile */
+                #life-force-activation .position-absolute:nth-of-type(1),
+                #spinal-energetics .position-absolute:nth-of-type(1),
+                #breathwork .position-absolute:nth-of-type(1),
+                #reiki-healing .position-absolute:nth-of-type(1),
+                #cacao-ceremonies .position-absolute:nth-of-type(1) {
+                    display: none !important;
+                }
+                
+                /* Convert text overlays to normal content below image */
+                #life-force-activation .position-absolute:last-of-type,
+                #spinal-energetics .position-absolute:last-of-type,
+                #breathwork .position-absolute:last-of-type,
+                #reiki-healing .position-absolute:last-of-type,
+                #cacao-ceremonies .position-absolute:last-of-type {
+                    position: static !important;
+                    transform: none !important;
+                    margin-top: 0 !important;
+                    top: auto !important;
+                    left: auto !important;
+                    width: 100% !important;
+                }
+                
+                /* Style the mobile content containers */
+                #life-force-activation .position-absolute:last-of-type .container,
+                #spinal-energetics .position-absolute:last-of-type .container,
+                #breathwork .position-absolute:last-of-type .container,
+                #reiki-healing .position-absolute:last-of-type .container,
+                #cacao-ceremonies .position-absolute:last-of-type .container {
+                    padding: 0 !important;
+                }
+                
+                #life-force-activation .position-absolute:last-of-type .col-lg-8,
+                #spinal-energetics .position-absolute:last-of-type .col-lg-8,
+                #breathwork .position-absolute:last-of-type .col-lg-8,
+                #reiki-healing .position-absolute:last-of-type .col-lg-8,
+                #cacao-ceremonies .position-absolute:last-of-type .col-lg-8 {
+                    max-width: 100% !important;
+                }
+                
+                #life-force-activation .position-absolute:last-of-type .p-5,
+                #spinal-energetics .position-absolute:last-of-type .p-5,
+                #breathwork .position-absolute:last-of-type .p-5,
+                #reiki-healing .position-absolute:last-of-type .p-5,
+                #cacao-ceremonies .position-absolute:last-of-type .p-5 {
+                    background-color: #F0E6D2 !important;
+                    margin-top: 1rem !important;
+                    padding: 1.5rem !important;
+                    border-radius: 0.5rem !important;
+                }
+                
+                /* Mobile styling for About section */
+                #about .text-center {
+                    padding: 2rem !important;
+                }
+                
+                #about .img-fluid {
+                    max-width: 250px !important;
+                    width: 250px !important;
+                    height: 250px !important;
+                    transform: scale(1) !important;
+                }
+                
+                #about .section-heading-lower {
+                    font-size: 2rem !important;
+                }
+                
+                #about .p-4 {
+                    padding: 1rem !important;
                 }
             }
             
         </style>
     </head>
     <body>
-        <header style="padding-top: 0.5rem;">
+        <header style="padding-top: 0; margin-top: -1rem;">
             <h1 class="site-heading text-center text-faded d-none d-lg-block" style="margin-bottom: 1rem;">
                 <span class="site-heading-upper text-primary mb-2" style="font-size: 1.2rem;">awaken your life force</span>
                 <span class="site-heading-lower" style="font-size: 3.5rem;">Soulrise Studio</span>
@@ -311,7 +439,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#home" data-en="Home" data-sv="Hem">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#" onclick="window.scrollTo(0,0); return false;" data-en="Home" data-sv="Hem">Home</a></li>
                         <li class="nav-item dropdown px-lg-4">
                             <a class="nav-link dropdown-toggle text-uppercase" href="#services" id="servicesDropdown" role="button" aria-expanded="false" data-en="Services" data-sv="Tjänster">
                                 Services
@@ -358,15 +486,15 @@
         </section>
         
         <!-- Packages Section -->
-        <section class="page-section" id="packages" style="padding: 2rem 0 5rem 0; background-color: #F0E6D2;">
+        <section class="page-section" id="packages" style="padding: 1rem 0 2rem 0; background-color: #F0E6D2;">
             <div class="container">
-                <div class="text-center mb-5">
+                <div class="text-center mb-3">
                     <h2 class="section-heading">
                         <span class="section-heading-lower" data-en="Choose Your Journey" data-sv="Välj din resa">Choose Your Journey</span>
                     </h2>
                 </div>
                 
-                <div class="row g-4">
+                <div class="row g-3">
                     <!-- Package 1: 8-Week Personal Journey -->
                     <div class="col-lg-4">
                         <div class="card h-100 border-0 shadow-sm">
@@ -493,9 +621,9 @@
                 </div>
                 
                 
-                <div class="text-center mt-5">
-                    <p class="lead text-muted mb-3" data-en="Not sure which path is right for you?" data-sv="Osäker på vilken väg som är rätt för dig?">Not sure which path is right for you?</p>
-                    <a href="mailto:lina.w.love@gmail.com?subject=Free Consultation&body=Hi Lina,%0A%0AI'd love to schedule a free consultation to discuss which package would be best for my healing journey.%0A%0AThank you!" class="btn btn-outline-primary btn-lg">
+                <div class="text-center mt-3 mb-1">
+                    <p class="text-muted mb-2" data-en="Not sure which path is right for you?" data-sv="Osäker på vilken väg som är rätt för dig?">Not sure which path is right for you?</p>
+                    <a href="mailto:lina.w.love@gmail.com?subject=Free Consultation&body=Hi Lina,%0A%0AI'd love to schedule a free consultation to discuss which package would be best for my healing journey.%0A%0AThank you!" class="btn btn-outline-primary">
                         <span data-en="Book Free Consultation" data-sv="Boka gratis konsultation">Book Free Consultation</span>
                     </a>
                 </div>
@@ -503,7 +631,7 @@
         </section>
         
         <!-- Weekly Group Classes Section -->
-        <section class="page-section" id="weekly-classes" style="padding: 5rem 0; background-color: #6b7c5d;">
+        <section class="page-section" id="weekly-classes" style="padding: 5rem 0; background-color: #6b7c5d; margin-top: -5rem;">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-heading" style="color: white;">
@@ -610,17 +738,14 @@
             </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="life-force-activation" style="margin-top: -3rem; margin-bottom: -3rem;">
-                <img class="img-fluid w-100" src="assets/img/life-force-activation.jpg" alt="Life Force Activation Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
-                
-                <!-- Title overlay directly on image -->
-                <div class="position-absolute start-50 translate-middle-x w-100" style="top: -0.2rem;">
-                    <div class="text-center">
-                        <h2 class="section-heading mb-0" style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); background-color: rgba(139, 115, 85, 0.4); padding: 0.5rem 1.5rem; border-radius: 25px; white-space: nowrap; display: inline-block;">
-                            <span class="section-heading-lower">Source Transmission - Life Force Activation</span>
-                        </h2>
-                    </div>
+            <div class="w-100 position-relative mb-5" id="life-force-activation">
+                <!-- Mobile title (hidden on desktop) -->
+                <div class="d-block d-md-none text-center mb-3">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-lower">Source Transmission - Life Force Activation</span>
+                    </h2>
                 </div>
+                <img class="img-fluid w-100" src="assets/img/life-force-activation.jpg" alt="Life Force Activation Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
                 <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
@@ -628,6 +753,9 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
+                                        <span data-en="Source Transmission - Life Force Activation" data-sv="Source Transmission - Life Force Activation">Source Transmission - Life Force Activation</span>
+                                    </h3>
                                     <p class="mb-4"><span data-en="An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session." data-sv="En intuitiv och upplevelsebaserad praktik för att väcka något inom dig och minnas vem du verkligen är. Denna kraftfulla men snälla aktivering bygger gradvis upp energin och ger dig precis vad du behöver utan att chocka ditt system. Den hjälper energin att flöda friare så du kan komma i djupare kontakt med din sanna essens och släppa gamla mönster som inte längre tjänar dig. Under aktiveringen kan du uppleva spontana rörelser, emotionella releaser, visioner, olika sensationer eller djup avslappning. Det som verkligen spelar roll är transformationen som fortsätter efter sessionen.">An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session.</span></p>
                                     <p class="mb-4"><span data-en="I offer both 1:1 and group sessions." data-sv="Jag erbjuder både 1:1 och gruppsessioner.">I offer both 1:1 and group sessions.</span></p>
                                     <p class="mb-4"><span data-en="Book your ONLINE sessions:" data-sv="Boka dina ONLINE sessioner:">Book your ONLINE sessions:</span></p>
@@ -643,39 +771,13 @@
                 </div>
             </div>
             
-            <div class="container">
-                
-                <!-- Spinal Energetics -->
-                <div class="product-item mb-5" id="spinal-energetics">
-                    <div class="product-item-title d-flex mb-4">
-                        <div class="d-flex mx-auto">
-                            <h2 class="section-heading mb-0">
-                                <span class="section-heading-lower">Spinal Energetics</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" />
-                        <div class="product-item-description d-flex mx-auto">
-                            <div class="p-5 rounded" style="background-color: #F0E6D2;"><p class="mb-4"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness." data-sv="Upplev den djupgående läkande kraften hos Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma. Detta tillvägagångssätt hjälper till att återställa flöde och vitalitet genom din ryggrad och ditt nervsystem, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer. Låt din kropp varva ner och hitta sitt naturliga tillstånd av balans och välbefinnande.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</span></p><p class="mb-4"><span data-en="Available in both individual sessions and special package deals for deeper transformation." data-sv="Tillgängligt i både individuella sessioner och specialpaket för djupare transformation.">Available in both individual sessions and special package deals for deeper transformation.</span></p><div class="d-flex flex-wrap gap-3 justify-content-center"><div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy"><span data-en="Book Session ONLINE" data-sv="Boka session ONLINE">Boka session ONLINE</span></a></div><div class="intro-button"><a class="btn btn-primary btn-lg" href="spinal-energetics-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div></div></div>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="container" style="padding: 1rem 0;">
+                <!-- Spacing between services -->
             </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="breathwork" style="margin-top: -3rem; margin-bottom: -3rem;">
-                <img class="img-fluid w-100" src="assets/img/breathwork.jpg" alt="Breathwork Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
-                
-                <!-- Title overlay directly on image -->
-                <div class="position-absolute start-50 translate-middle-x w-100" style="top: 0.2rem;">
-                    <div class="text-center">
-                        <h2 class="section-heading mb-0" style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); background-color: rgba(139, 115, 85, 0.4); padding: 0.5rem 1.5rem; border-radius: 25px; white-space: nowrap; display: inline-block;">
-                            <span class="section-heading-lower">Breathwork</span>
-                        </h2>
-                    </div>
-                </div>
+            <div class="w-100 position-relative mb-5" id="spinal-energetics">
+                <img class="img-fluid w-100" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
                 <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
@@ -683,6 +785,45 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
+                                        <span data-en="Spinal Energetics" data-sv="Spinal Energetics">Spinal Energetics</span>
+                                    </h3>
+                                    <p class="mb-4"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness." data-sv="Upplev den djupgående läkande kraften hos Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma. Detta tillvägagångssätt hjälper till att återställa flöde och vitalitet genom din ryggrad och ditt nervsystem, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer. Låt din kropp varva ner och hitta sitt naturliga tillstånd av balans och välbefinnande.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</span></p>
+                                    <p class="mb-4"><span data-en="Available in both individual sessions and special package deals for deeper transformation." data-sv="Tillgängligt i både individuella sessioner och specialpaket för djupare transformation.">Available in both individual sessions and special package deals for deeper transformation.</span></p>
+                                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                                        <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy"><span data-en="Book Session ONLINE" data-sv="Boka session ONLINE">Book Session ONLINE</span></a></div>
+                                        <div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="spinal-energetics-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container" style="padding: 1rem 0;">
+                <!-- Spacing between services -->
+            </div>
+            
+            <!-- Full width image with text overlay - outside container -->
+            <div class="w-100 position-relative mb-5" id="breathwork">
+                <!-- Mobile title (hidden on desktop) -->
+                <div class="d-block d-md-none text-center mb-3">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-lower">Breathwork</span>
+                    </h2>
+                </div>
+                <img class="img-fluid w-100" src="assets/img/breathwork.jpg" alt="Breathwork Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
+                
+                <!-- Text overlay positioned over the image -->
+                <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
+                                        <span data-en="Breathwork" data-sv="Breathwork">Breathwork</span>
+                                    </h3>
                                     <p class="mb-4"><span data-en="Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom." data-sv="Medvetet andningsarbete är en urgammal praktik som använder specifika andningstekniker för att underlätta djup läkning, emotionell frigörelse och andlig uppvaknande. Din andning är en bro mellan ditt medvetna och omedvetna sinne, din kropp och ande. Genom kraftfulla andningsmönster kan vi kringgå det analytiska sinnet och ansluta direkt med din inre visdom.">Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom.</span></p>
                                     <p class="mb-4"><span data-en="Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body." data-sv="Varje andningsarbetssession skapar en säker behållare för utforskning och läkning, vägledd av din andnings intelligens och din kropps visdom.">Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
@@ -697,35 +838,13 @@
                 </div>
             </div>
             
-                <!-- Reiki Healing -->
-                <div class="product-item mb-5" id="reiki-healing">
-                    <div class="product-item-title d-flex mb-4">
-                        <div class="d-flex mx-auto">
-                            <h2 class="section-heading mb-0">
-                                <span class="section-heading-lower">Reiki Healing</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" />
-                        <div class="product-item-description d-flex mx-auto">
-                            <div class="p-5 rounded" style="background-color: #F0E6D2;"><p class="mb-4"><span data-en="Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being." data-sv="Upplev den milda men kraftfulla läkande energin från Reiki, en uråldrig japansk praktik som kanaliserar universell livskraftsenergi för att främja djup avslappning, stressreduktion och naturlig läkning. Våra certifierade Reiki-utövare skapar ett fridfullt utrymme där din kropps medfödda läkningsförmågor aktiveras och ger balans till ditt fysiska, emotionella och andliga välbefinnande.">Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being.</span></p><p class="mb-4"><span data-en="Perfect for those seeking gentle healing and energetic balance through this time-honored modality." data-sv="Perfekt för dig som söker mild läkning och energetisk balans genom denna åldriga modalitet.">Perfect for those seeking gentle healing and energetic balance through this time-honored modality.</span></p><div class="d-flex flex-wrap gap-3 justify-content-center"><div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY"><span data-en="Book Reiki" data-sv="Boka Reiki">Boka Reiki</span></a></div><div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="reiki-healing-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div></div></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container" style="padding: 1rem 0;">
+                <!-- Spacing between services -->
+            </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="cacao-ceremonies" style="margin-top: -3rem; margin-bottom: -3rem;">
-                <img class="img-fluid w-100" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" style="height: calc(80vh + 6rem); object-fit: cover;" />
-                
-                <!-- Title overlay directly on image -->
-                <div class="position-absolute start-50 translate-middle-x w-100" style="top: 0.2rem;">
-                    <div class="text-center">
-                        <h2 class="section-heading mb-0" style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); background-color: rgba(139, 115, 85, 0.4); padding: 0.5rem 1.5rem; border-radius: 25px; white-space: nowrap; display: inline-block;">
-                            <span class="section-heading-lower">Cacao Ceremonies</span>
-                        </h2>
-                    </div>
-                </div>
+            <div class="w-100 position-relative mb-5" id="reiki-healing">
+                <img class="img-fluid w-100" src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
                 <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
@@ -733,6 +852,45 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
+                                        <span data-en="Reiki Healing" data-sv="Reiki Healing">Reiki Healing</span>
+                                    </h3>
+                                    <p class="mb-4"><span data-en="Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being." data-sv="Upplev den milda men kraftfulla läkande energin från Reiki, en uråldrig japansk praktik som kanaliserar universell livskraftsenergi för att främja djup avslappning, stressreduktion och naturlig läkning. Våra certifierade Reiki-utövare skapar ett fridfullt utrymme där din kropps medfödda läkningsförmågor aktiveras och ger balans till ditt fysiska, emotionella och andliga välbefinnande.">Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being.</span></p>
+                                    <p class="mb-4"><span data-en="Perfect for those seeking gentle healing and energetic balance through this time-honored modality." data-sv="Perfekt för dig som söker mild läkning och energetisk balans genom denna åldriga modalitet.">Perfect for those seeking gentle healing and energetic balance through this time-honored modality.</span></p>
+                                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                                        <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY"><span data-en="Book Reiki" data-sv="Boka Reiki">Book Reiki</span></a></div>
+                                        <div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="reiki-healing-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container" style="padding: 1rem 0;">
+                <!-- Spacing between services -->
+            </div>
+            
+            <!-- Full width image with text overlay - outside container -->
+            <div class="w-100 position-relative mb-5" id="cacao-ceremonies">
+                <!-- Mobile title (hidden on desktop) -->
+                <div class="d-block d-md-none text-center mb-3">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-lower">Cacao Ceremonies</span>
+                    </h2>
+                </div>
+                <img class="img-fluid w-100" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" style="height: calc(80vh + 6rem); object-fit: cover;" />
+                
+                <!-- Text overlay positioned over the image -->
+                <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
+                                        <span data-en="Cacao Ceremonies" data-sv="Cacao Ceremonies">Cacao Ceremonies</span>
+                                    </h3>
                                     <p class="mb-4"><span data-en="Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment." data-sv="Upplev en kakaoceremoni där vi hedrar denna uråldriga växtmedicin tillsammans. Den ceremoniella kakaon är hjärtöppnande och fin att dela i ceremoni. Kakaons magi skapar utrymme för kontakt, läkning och gemenskap i en trygg miljö.">Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment.</span></p>
                                     <p class="mb-4"><span data-en="Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing." data-sv="Upplev mama cacao's milda guidning genom meditation, intentionsättning och delning.">Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
@@ -764,7 +922,7 @@
                             <div class="text-center mb-4">
                                 <img src="assets/img/lina-profile.jpg" alt="Lina" class="img-fluid rounded-circle shadow" style="max-width: 400px; width: 400px; height: 400px; object-fit: cover; object-position: center 30%; transform: scale(0.8);">
                                 <h4 class="mt-3" style="color: #8B7355; font-weight: 400; font-style: italic;">
-                                    <span data-en="Hi, I'm Lina" data-sv="Hej, jag är Lina">Hi, I'm Lina</span>
+                                    <span data-en="Hi, I'm Lina" data-sv="Hej, jag heter Lina">Hi, I'm Lina</span>
                                 </h4>
                             </div>
                             

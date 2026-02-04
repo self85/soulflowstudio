@@ -15,6 +15,49 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
+            /* Override bg-faded with Om Mig colors */
+            .bg-faded {
+                background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%) !important;
+                border: none !important;
+            }
+            
+            /* Section headings with Om Mig colors */
+            .section-heading .section-heading-lower,
+            h4, h5 {
+                color: #2F170F !important;
+            }
+            
+            /* Special styling for main section headings */
+            h3 {
+                color: #F0E6D2 !important;
+            }
+            
+            /* Body text with Om Mig colors */
+            p, li {
+                color: #5a4a3a !important;
+            }
+            
+            /* Page sections with unified green background */
+            .page-section {
+                background-color: #6b7c5d !important;
+                padding: 2rem 0 !important;
+            }
+            
+            /* Remove spacing between sections */
+            .page-section + .page-section {
+                padding-top: 0 !important;
+            }
+            
+            /* CTA section styling - restore original yellow */
+            .page-section.cta {
+                background-color: rgba(230, 167, 86, 0.9) !important;
+            }
+            
+            .cta-inner {
+                border: none !important;
+                box-shadow: 0 0.5rem 1rem rgba(47, 23, 15, 0.15) !important;
+            }
+            
             /* Hover dropdown functionality */
             .dropdown:hover .dropdown-menu {
                 display: block !important;
@@ -46,11 +89,6 @@
                 margin: 0.25rem 0;
             }
             
-            /* Ensure dropdown stays visible when hovering over menu items */
-            .dropdown-toggle::after {
-                display: inline-block !important;
-            }
-            
             /* Language toggle button styling */
             #languageToggle {
                 border-color: #e6a756;
@@ -68,7 +106,7 @@
         </style>
     </head>
     <body>
-        <header style="padding-top: 0.5rem;">
+        <header style="padding-top: 0; margin-top: -1rem;">
             <h1 class="site-heading text-center text-faded d-none d-lg-block" style="margin-bottom: 1rem;">
                 <span class="site-heading-upper text-primary mb-2" style="font-size: 1.2rem;">awaken your life force</span>
                 <span class="site-heading-lower" style="font-size: 3.5rem;">Soulrise Studio</span>
@@ -80,7 +118,7 @@
                 <a class="navbar-brand text-uppercase fw-bold" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#home">Home</a></li>
                         <li class="nav-item dropdown px-lg-4">
                             <a class="nav-link dropdown-toggle text-uppercase" href="index.html#services" id="servicesDropdown" role="button" aria-expanded="false">
@@ -111,104 +149,68 @@
             </div>
         </nav>
         
-        <!-- Hero Section -->
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" />
-                    <div class="intro-text left-0 text-center bg-faded p-4 rounded">
+        <!-- Hero Image Section -->
+        <section style="padding: 0; margin: 0;">
+            <!-- Full width image -->
+            <div class="w-100 position-relative">
+                <img class="intro-img img-fluid w-100" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" style="height: 70vh; object-fit: cover; margin-top: 0;" />
+                <!-- Text overlay positioned over the image -->
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <div class="intro-text text-center p-5 rounded" style="background-color: rgba(240, 230, 210, 0.9); max-width: 800px;">
                         <h2 class="section-heading mb-4">
-                            <span class="section-heading-lower">Spinal Energetics</span>
+                            <span class="section-heading-lower" data-en="Spinal Energetics" data-sv="Spinal Energetics">Spinal Energetics</span>
                         </h2>
-                        <p class="mb-3"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma." data-sv="Upplev den djupa läkningskraften i Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma.</span></p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy" target="_blank"><span data-en="Book Your Session Now" data-sv="Boka din session nu">Book Your Session Now</span></a></div>
+                        <p class="mb-4"><span data-en="Spinal Energetics is a gentle healing practice that recognizes the spine as the main channel for our life force energy. Created by Dr. Sarah Jane, this approach works with your body's natural intelligence to release stored tension, trauma, and energetic blockages." data-sv="Spinal Energetics är en mild läkningspraktik som erkänner ryggraden som huvudkanalen för vår livskraftsenergi. Skapad av Dr. Sarah Jane, detta tillvägagångssätt arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning, trauma och energetiska blockeringar.">Spinal Energetics is a gentle healing practice that recognizes the spine as the main channel for our life force energy. Created by Dr. Sarah Jane, this approach works with your body's natural intelligence to release stored tension, trauma, and energetic blockages.</span></p>
+                        
+                        <p class="mb-4"><span data-en="Through light touch along the spine and nervous system, Spinal Energetics activates your body's innate healing mechanisms. This process allows your nervous system to unwind and release patterns that no longer serve you, promoting deep healing on physical, emotional, and energetic levels." data-sv="Genom lätt beröring längs ryggraden och nervsystemet aktiverar Spinal Energetics din kropps medfödda läkningsmekanism. Denna process gör att ditt nervsystem kan varva ner och släppa mönster som inte längre tjänar dig, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer.">Through light touch along the spine and nervous system, Spinal Energetics activates your body's innate healing mechanisms. This process allows your nervous system to unwind and release patterns that no longer serve you, promoting deep healing on physical, emotional, and energetic levels.</span></p>
+                        
+                        <p class="mb-0"><span data-en="Each session honors your body's unique healing journey, allowing transformation to unfold naturally and at your own pace. Your body knows exactly what it needs to heal - Spinal Energetics simply provides the safe space for this wisdom to emerge." data-sv="Varje session hedrar din kropps unika läkningsresa och låter transformation utvecklas naturligt och i din egen takt. Din kropp vet exakt vad den behöver för att läka - Spinal Energetics tillhandahåller helt enkelt det säkra utrymmet för denna visdom att framträda.">Each session honors your body's unique healing journey, allowing transformation to unfold naturally and at your own pace. Your body knows exactly what it needs to heal - Spinal Energetics simply provides the safe space for this wisdom to emerge.</span></p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- What is Spinal Energetics -->
-        <section class="page-section">
+        
+        <!-- Main Content Section -->
+        <section class="page-section" style="margin-top: 0; padding-top: 2rem;">
             <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="What is Spinal Energetics?" data-sv="Vad är Spinal Energetics?">What is Spinal Energetics?</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-4 rounded">
-                            <p class="mb-4"><span data-en="Spinal Energetics is a gentle healing practice that recognizes the spine as the main channel for our life force energy. Created by Dr. Sarah Jane, this approach works with your body's natural intelligence to release stored tension, trauma, and energetic blockages." data-sv="Spinal Energetics är en mild läkningspraktik som erkänner ryggraden som huvudkanalen för vår livskraftsenergi. Skapad av Dr. Sarah Jane, detta tillvägagångssätt arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning, trauma och energetiska blockeringar.">Spinal Energetics is a gentle healing practice that recognizes the spine as the main channel for our life force energy. Created by Dr. Sarah Jane, this approach works with your body's natural intelligence to release stored tension, trauma, and energetic blockages.</span></p>
-                            
-                            <p class="mb-4"><span data-en="Through light touch along the spine and nervous system, Spinal Energetics activates your body's innate healing mechanisms. This process allows your nervous system to unwind and release patterns that no longer serve you, promoting deep healing on physical, emotional, and energetic levels." data-sv="Genom lätt beröring längs ryggraden och nervsystemet aktiverar Spinal Energetics din kropps medfödda läkningsmekanism. Denna process gör att ditt nervsystem kan varva ner och släppa mönster som inte längre tjänar dig, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer.">Through light touch along the spine and nervous system, Spinal Energetics activates your body's innate healing mechanisms. This process allows your nervous system to unwind and release patterns that no longer serve you, promoting deep healing on physical, emotional, and energetic levels.</span></p>
-                            
-                            <p class="mb-0"><span data-en="Each session honors your body's unique healing journey, allowing transformation to unfold naturally and at your own pace. Your body knows exactly what it needs to heal - Spinal Energetics simply provides the safe space for this wisdom to emerge." data-sv="Varje session hedrar din kropps unika läkningsresa och låter transformation utvecklas naturligt och i din egen takt. Din kropp vet exakt vad den behöver för att läka - Spinal Energetics tillhandahåller helt enkelt det säkra utrymmet för denna visdom att framträda.">Each session honors your body's unique healing journey, allowing transformation to unfold naturally and at your own pace. Your body knows exactly what it needs to heal - Spinal Energetics simply provides the safe space for this wisdom to emerge.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Online Sessions -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="Online Sessions" data-sv="Onlinesessioner">Online Sessions</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-4 rounded">
-                            <p class="mb-0"><span data-en="Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment." data-sv="Energin är inte bunden till tid eller rum, vilket gör att sessionen även kan upplevas ONLINE. Ett perfekt alternativ när du inte kan eller hinner ta dig iväg till en studio, eller tycker det är lättare att slappna av i din egen hemmiljö.">Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- How it Works -->
-        <section class="page-section">
-            <div class="container">
+                <!-- How it Works -->
                 <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="How Spinal Energetics Works" data-sv="Hur Spinal Energetics fungerar">How Spinal Energetics Works</span></span>
-                    </h2>
+                    <h3 style="font-size: 1.8rem; font-weight: 600; color: #F0E6D2;">
+                        <span><span data-en="How Spinal Energetics Works" data-sv="Hur Spinal Energetics fungerar">How Spinal Energetics Works</span></span>
+                    </h3>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
                             <h4 class="text-primary mb-3"><span data-en="1. Gentle Touch/Intention" data-sv="1. Mjuk beröring/Intention">1. Gentle Touch/Intention</span></h4>
                             <p><span data-en="Light contact points along your spine and nervous system activate your body's natural healing response." data-sv="Lätta kontaktpunkter längs din ryggräd och nervsystem aktiverar din kropps naturliga läkningsrespons.">Light contact points along your spine and nervous system activate your body's natural healing response.</span></p>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
                             <h4 class="text-primary mb-3"><span data-en="2. Energy Release" data-sv="2. Energifrigörelse">2. Energy Release</span></h4>
                             <p><span data-en="Your body begins to release stored tension, emotions, and trauma through natural movements and responses." data-sv="Din kropp börjar frigöra lagrad spänning, känslor och trauma genom naturliga rörelser och reaktioner.">Your body begins to release stored tension, emotions, and trauma through natural movements and responses.</span></p>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
                             <h4 class="text-primary mb-3"><span data-en="3. Integration" data-sv="3. Integration">3. Integration</span></h4>
                             <p><span data-en="Your nervous system integrates the healing, creating new patterns of wellness and vitality." data-sv="Ditt nervsystem integrerar läkningen och skapar nya mönster av välbefinnande och vitalitet.">Your nervous system integrates the healing, creating new patterns of wellness and vitality.</span></p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Benefits Section -->
-        <section class="page-section">
-            <div class="container">
+                <!-- Benefits Section -->
                 <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="Benefits You May Experience" data-sv="Fördelar du kan uppleva">Benefits You May Experience</span></span>
-                    </h2>
+                    <h3 style="font-size: 1.8rem; font-weight: 600;">
+                        <span><span data-en="Benefits You May Experience" data-sv="Fördelar du kan uppleva">Benefits You May Experience</span></span>
+                    </h3>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-lg-6 mb-4">
-                        <div class="bg-faded p-4 rounded h-100">
+                        <div class="bg-faded p-4 rounded shadow h-100">
                             <h4 class="text-primary mb-3"><span data-en="Physical Healing" data-sv="Fysisk läkning">Physical Healing</span></h4>
                             <ul>
                                 <li><span data-en="Relief from chronic pain and tension" data-sv="Lindring från kronisk smärta och spänning">Relief from chronic pain and tension</span></li>
@@ -221,7 +223,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
-                        <div class="bg-faded p-4 rounded h-100">
+                        <div class="bg-faded p-4 rounded shadow h-100">
                             <h4 class="text-primary mb-3"><span data-en="Emotional & Mental Wellness" data-sv="Emotionellt & Mentalt välbefinnande">Emotional & Mental Wellness</span></h4>
                             <ul>
                                 <li><span data-en="Release of stored emotional trauma" data-sv="Frigörelse av lagrat emotionellt trauma">Release of stored emotional trauma</span></li>
@@ -234,21 +236,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- What to Expect -->
-        <section class="page-section">
-            <div class="container">
+                <!-- What to Expect -->
                 <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="What to Expect" data-sv="Vad du kan förvänta dig">What to Expect</span></span>
-                    </h2>
+                    <h3 style="font-size: 1.8rem; font-weight: 600;">
+                        <span><span data-en="What to Expect" data-sv="Vad du kan förvänta dig">What to Expect</span></span>
+                    </h3>
                 </div>
+                
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-4 rounded">
+                        <div class="bg-faded p-4 rounded shadow">
                             <h4 class="text-primary mb-3"><span data-en="Preparation for Online Sessions" data-sv="Förberedelse för onlinesessioner">Preparation for Online Sessions</span></h4>
+                            
+                            <p class="mb-4"><span data-en="Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment." data-sv="Energin är inte bunden till tid eller rum, vilket gör att sessionen även kan upplevas ONLINE. Ett perfekt alternativ när du inte kan eller hinner ta dig iväg till en studio, eller tycker det är lättare att slappna av i din egen hemmiljö.">Energy is not bound by time or space, which makes it possible to experience sessions ONLINE. A perfect alternative when you cannot or don't have time to travel to a studio, or when you find it easier to relax in your own home environment.</span></p>
                             <div class="mb-4">
                                 <ul class="mb-4">
                                     <li><span data-en="Download the Zoom app. You'll receive a Zoom link via email approximately 15 minutes before we start." data-sv="Ladda ner Zoom-appen. Du får en Zoom-länk via e-post cirka 15 minuter innan vi börjar.">Download the Zoom app. You'll receive a Zoom link via email approximately 15 minutes before we start.</span></li>
@@ -285,8 +286,6 @@
                             
                             <p class="mb-4"><strong><span data-en="Contact me for any questions:" data-sv="Kontakta mig för frågor:">Contact me for any questions:</span></strong> <a href="mailto:lina.w.love@gmail.com">lina.w.love@gmail.com</a></p>
                             
-                            <h4 class="text-primary mb-3"><span data-en="Package Options" data-sv="Paketmöjligheter">Package Options</span></h4>
-                            <p class="mb-0"><span data-en="For deeper transformation, consider our 3-session package. Multiple sessions allow for progressive unwinding and more comprehensive healing as your nervous system builds trust in the process." data-sv="För djupare transformation, överväg vårt 3-sessionspaket. Flera sessioner tillåter progressiv avveckling och mer omfattande läkning när ditt nervsystem bygger förtroende för processen.">For deeper transformation, consider our 3-session package. Multiple sessions allow for progressive unwinding and more comprehensive healing as your nervous system builds trust in the process.</span></p>
                         </div>
                     </div>
                 </div>
@@ -294,13 +293,12 @@
         </section>
 
         <!-- Booking Section -->
-        <section class="page-section cta">
+        <section class="page-section cta" style="padding: 10rem 0 2rem 0;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner bg-faded text-center rounded">
+                        <div class="cta-inner bg-faded text-center rounded shadow-lg p-5">
                             <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper"><span data-en="Begin Your Healing Journey" data-sv="Börja din läkningsresa">Begin Your Healing Journey</span></span>
                                 <span class="section-heading-lower"><span data-en="Book Your Session" data-sv="Boka din session">Book Your Session</span></span>
                             </h2>
                             <p class="mb-4"><span data-en="Allow your body's natural wisdom to guide your healing. Choose between individual sessions or save with our comprehensive 3-session package for deeper transformation." data-sv="Låt din kropps naturliga visdom vägleda din läkning. Välj mellan individuella sessioner eller spara med vårt omfattande 3-sessionspaket för djupare transformation.">Allow your body's natural wisdom to guide your healing. Choose between individual sessions or save with our comprehensive 3-session package for deeper transformation.</span></p>

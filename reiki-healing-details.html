@@ -65,10 +65,17 @@
                 color: #000;
                 border-color: #e6a756;
             }
+            
+            /* Mobile navbar brand visibility */
+            @media (max-width: 991.98px) {
+                #navbarBrand {
+                    opacity: 1 !important; /* Always show on mobile */
+                }
+            }
         </style>
     </head>
     <body>
-        <header style="padding-top: 0.5rem;">
+        <header style="padding-top: 0; margin-top: -1rem;">
             <h1 class="site-heading text-center text-faded d-none d-lg-block" style="margin-bottom: 1rem;">
                 <span class="site-heading-upper text-primary mb-2" style="font-size: 1.2rem;">awaken your life force</span>
                 <span class="site-heading-lower" style="font-size: 3.5rem;">Soulrise Studio</span>
@@ -80,7 +87,7 @@
                 <a class="navbar-brand text-uppercase fw-bold" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#home">Home</a></li>
                         <li class="nav-item dropdown px-lg-4">
                             <a class="nav-link dropdown-toggle text-uppercase" href="index.html#services" id="servicesDropdown" role="button" aria-expanded="false">
@@ -111,188 +118,72 @@
             </div>
         </nav>
         
-        <!-- Hero Section -->
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-lower">Reiki Healing</span>
-                        </h2>
-                        <p class="mb-3"><span data-en="Experience the gentle yet powerful healing energy of Reiki, a practice that promotes deep relaxation and natural healing." data-sv="Upplev Reikis mjuka men kraftfulla läkningsenergi, en praktik som främjar djup avslappning och naturlig läkning.">Experience the gentle yet powerful healing energy of Reiki, a practice that promotes deep relaxation and natural healing.</span></p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY" target="_blank"><span data-en="Book Your Session Now" data-sv="Boka din session nu">Book Your Session Now</span></a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- What is Reiki -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="What is Reiki?" data-sv="Vad är Reiki?">What is Reiki?</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-5 rounded">
-                            <p class="mb-4"><span data-en="Reiki is a Japanese healing technique that means 'universal life energy.' Reiki works with the natural energy that flows through all living beings to promote healing, balance, and well-being." data-sv="Reiki är en japansk läkningsteknik som betyder 'universell livsenergi.' Reiki arbetar med den naturliga energin som flöder genom alla levande varelser för att främja läkning, balans och välbefinnande.">Reiki is a Japanese healing technique that means "universal life energy." Reiki works with the natural energy that flows through all living beings to promote healing, balance, and well-being.</span></p>
-                            
-                            <p class="mb-4"><span data-en="During a Reiki session, practitioners channel this universal life force energy through their hands to activate your body's natural healing processes. This gentle, non-invasive practice helps remove energetic blockages, reduce stress, and restore balance to your physical, emotional, and spiritual being." data-sv="Under en Reiki-session kanaliserar utövare denna universella livskraftsenergi genom sina händer för att aktivera kroppens naturliga läkningsprocesser. Denna mjuka, icke-invasiva praktik hjälper till att ta bort energetiska blockeringar, minska stress och återställa balans till ditt fysiska, emotionella och andliga väsen.">During a Reiki session, practitioners channel this universal life force energy through their hands to activate your body's natural healing processes. This gentle, non-invasive practice helps remove energetic blockages, reduce stress, and restore balance to your physical, emotional, and spiritual being.</span></p>
-                            
-                            <p class="mb-0"><span data-en="Reiki works on the principle that healing energy flows where it is needed most, addressing the root cause of imbalance rather than just symptoms. This intelligent energy knows exactly what you need and provides it in the perfect way for your highest good." data-sv="Reiki arbetar på principen att läkningsenergi flödar dit den behövs mest, och adresserar grundorsaken till obalans snarare än bara symtom. Denna intelligenta energi vet exakt vad du behöver och tillhandahåller det på det perfekta sättet för ditt högsta bästa.">Reiki works on the principle that healing energy flows where it is needed most, addressing the root cause of imbalance rather than just symptoms. This intelligent energy knows exactly what you need and provides it in the perfect way for your highest good.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How Reiki Works -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="How Reiki Works" data-sv="Hur Reiki fungerar">How Reiki Works</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
-                            <h4 class="text-primary mb-3"><span data-en="1. Energy Channeling" data-sv="1. Energikanalisering">1. Energy Channeling</span></h4>
-                            <p><span data-en="The practitioner acts as a conduit for universal life force energy, allowing it to flow through their hands to you." data-sv="Utövaren fungerar som en kanal för universell livskraftsenergi, vilket gör att den kan flöda genom deras händer till dig.">The practitioner acts as a conduit for universal life force energy, allowing it to flow through their hands to you.</span></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
-                            <h4 class="text-primary mb-3"><span data-en="2. Energetic Balancing" data-sv="2. Energetisk balansering">2. Energetic Balancing</span></h4>
-                            <p><span data-en="Reiki energy flows to areas of imbalance, clearing blockages and restoring natural energy flow throughout your system." data-sv="Reiki-energi flödar till områden med obalans, rensar blockeringar och återställer naturligt energiflöde genom ditt system.">Reiki energy flows to areas of imbalance, clearing blockages and restoring natural energy flow throughout your system.</span></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
-                            <h4 class="text-primary mb-3"><span data-en="3. Natural Healing" data-sv="3. Naturlig läkning">3. Natural Healing</span></h4>
-                            <p><span data-en="Your body's innate healing abilities are activated, promoting recovery, relaxation, and overall well-being." data-sv="Kroppens medfödda läkningsförmågor aktiveras, vilket främjar återhämtning, avslappning och allmänt välbefinnande.">Your body's innate healing abilities are activated, promoting recovery, relaxation, and overall well-being.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Benefits Section -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="Benefits You May Experience" data-sv="Fördelar du kan uppleva">Benefits You May Experience</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
-                            <h4 class="text-primary mb-3"><span data-en="Physical Benefits" data-sv="Fysiska fördelar">Physical Benefits</span></h4>
-                            <ul class="list-unstyled">
-                                <li>• <span data-en="Deep relaxation and stress relief" data-sv="Djup avslappning och stresslindring">Deep relaxation and stress relief</span></li>
-                                <li>• <span data-en="Pain reduction and healing acceleration" data-sv="Smärtreduktion och påskyndad läkning">Pain reduction and healing acceleration</span></li>
-                                <li>• <span data-en="Improved sleep quality" data-sv="Förbättrad sömnkvalitet">Improved sleep quality</span></li>
-                                <li>• <span data-en="Enhanced immune system function" data-sv="Förstärkt immunsystemfunktion">Enhanced immune system function</span></li>
-                                <li>• <span data-en="Increased energy and vitality" data-sv="Ökad energi och vitalitet">Increased energy and vitality</span></li>
-                                <li>• <span data-en="Better circulation and detoxification" data-sv="Bättre cirkulation och avgiftning">Better circulation and detoxification</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="bg-faded p-4 rounded h-100 text-center">
-                            <h4 class="text-primary mb-3"><span data-en="Emotional & Spiritual Benefits" data-sv="Emotionella & andliga fördelar">Emotional & Spiritual Benefits</span></h4>
-                            <ul class="list-unstyled">
-                                <li>• <span data-en="Reduced anxiety and depression" data-sv="Minskad ångest och depression">Reduced anxiety and depression</span></li>
-                                <li>• <span data-en="Emotional balance and stability" data-sv="Emotionell balans och stabilitet">Emotional balance and stability</span></li>
-                                <li>• <span data-en="Enhanced mental clarity and focus" data-sv="Förbättrad mental klarhet och fokus">Enhanced mental clarity and focus</span></li>
-                                <li>• <span data-en="Greater sense of peace and calm" data-sv="Större känsla av frid och lugn">Greater sense of peace and calm</span></li>
-                                <li>• <span data-en="Spiritual connection and growth" data-sv="Andlig kontakt och tillväxt">Spiritual connection and growth</span></li>
-                                <li>• <span data-en="Increased self-awareness and intuition" data-sv="Ökad självkännedom och intuition">Increased self-awareness and intuition</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Distance Reiki -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="Distance Reiki Sessions" data-sv="Reiki på distans">Distance Reiki Sessions</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-5 rounded">
-                            <p class="mb-4"><span data-en="Reiki energy transcends physical boundaries, making it equally effective when sent across any distance. Distance Reiki sessions allow you to receive healing energy from the comfort of your own home, making this powerful practice accessible no matter where you are in the world." data-sv="Reiki-energi transcenderar fysiska gränser, vilket gör den lika effektiv när den skickas över vilket avstånd som helst. Reiki-sessioner på distans gör att du kan ta emot läkningsenergi från bekvämligheten av ditt eget hem, vilket gör denna kraftfulla praktik tillgänglig oavsett var du befinner dig i världen.">Reiki energy transcends physical boundaries, making it equally effective when sent across any distance. Distance Reiki sessions allow you to receive healing energy from the comfort of your own home, making this powerful practice accessible no matter where you are in the world.</span></p>
-                            
-                            <h4 class="text-primary mb-3"><span data-en="How Distance Reiki Works" data-sv="Hur Reiki på distans fungerar">How Distance Reiki Works</span></h4>
-                            <p class="mb-4"><span data-en="Using specific Reiki symbols and techniques, I connect energetically with you and send healing energy to wherever you are. At the agreed-upon time, simply lie down in a comfortable, quiet space and remain open to receiving the energy. Many people report feeling the same sensations as in-person sessions - warmth, tingling, deep relaxation, and emotional releases." data-sv="Med hjälp av specifika Reiki-symboler och tekniker ansluter jag energetiskt till dig och skickar läkningsenergi till var du än befinner dig. Vid överenskommen tid, lägg dig bara ner på en bekväm, tyst plats och förbli öppen för att ta emot energin. Många rapporterar att de känner samma sensationer som under sessioner på plats - värme, kittlande känslor, djup avslappning och emotionella frigivelser.">Using specific Reiki symbols and techniques, I connect energetically with you and send healing energy to wherever you are. At the agreed-upon time, simply lie down in a comfortable, quiet space and remain open to receiving the energy. Many people report feeling the same sensations as in-person sessions - warmth, tingling, deep relaxation, and emotional releases.</span></p>
-                            
-                            <h4 class="text-primary mb-3"><span data-en="Benefits of Distance Sessions" data-sv="Fördelar med distanssessioner">Benefits of Distance Sessions</span></h4>
-                            <ul class="mb-4">
-                                <li><span data-en="Receive healing from anywhere in the world" data-sv="Ta emot läkning från var som helst i världen">Receive healing from anywhere in the world</span></li>
-                                <li><span data-en="Perfect when travel isn't possible" data-sv="Perfekt när resor inte är möjliga">Perfect when travel isn't possible</span></li>
-                                <li><span data-en="Experience the comfort of your own space" data-sv="Upplev bekvämligheten av ditt eget utrymme">Experience the comfort of your own space</span></li>
-                                <li><span data-en="Same healing benefits as in-person sessions" data-sv="Samma läkningsfördelar som sessioner på plats">Same healing benefits as in-person sessions</span></li>
-                                <li><span data-en="Flexible scheduling across time zones" data-sv="Flexibel schemaläggning över tidszoner">Flexible scheduling across time zones</span></li>
-                            </ul>
-                            
-                            <p class="mb-0"><span data-en="After the session, I'll share any insights or messages that came through during the healing. Distance Reiki is just as powerful and effective as in-person sessions - energy knows no boundaries." data-sv="Efter sessionen delar jag eventuella insikter eller meddelanden som kom fram under läkningen. Reiki på distans är lika kraftfullt och effektivt som sessioner på plats - energi känner inga gränser.">After the session, I'll share any insights or messages that came through during the healing. Distance Reiki is just as powerful and effective as in-person sessions - energy knows no boundaries.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- What to Expect -->
-        <section class="page-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading">
-                        <span class="section-heading-lower"><span data-en="What to Expect" data-sv="Vad du kan förvänta dig">What to Expect</span></span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="bg-faded p-5 rounded">
-                            <h4 class="text-primary mb-3"><span data-en="Before Your Session" data-sv="Innan din session">Before Your Session</span></h4>
-                            <p class="mb-4"><span data-en="Come in comfortable clothing and with an open heart. We'll discuss your intentions and any areas where you'd like healing focus. No special preparation is needed - just bring yourself as you are." data-sv="Kom i bekväma kläder och med ett öppet hjärta. Vi kommer att diskutera dina intentioner och eventuella områden där du vill ha läkningsfokus. Ingen särskild förberedelse behövs - bara kom som du är.">Come in comfortable clothing and with an open heart. We'll discuss your intentions and any areas where you'd like healing focus. No special preparation is needed - just bring yourself as you are.</span></p>
-                            
-                            <h4 class="text-primary mb-3"><span data-en="During Your Session" data-sv="Under din session">During Your Session</span></h4>
-                            <p class="mb-4"><span data-en="You'll lie fully clothed on a comfortable massage table while I gently place my hands on or slightly above specific points on your body. You may feel warmth, tingling, deep relaxation, or emotional release. Some people see colors or have spiritual insights." data-sv="Du kommer att ligga fullt påklädd på en bekväm massagebänk medan jag försiktigt placerar mina händer på eller strax ovanför specifika punkter på din kropp. Du kan känna värme, kittlande känslor, djup avslappning eller emotionell frigörelse. Vissa människor ser färger eller har andliga insikter.">You'll lie fully clothed on a comfortable massage table while I gently place my hands on or slightly above specific points on your body. You may feel warmth, tingling, deep relaxation, or emotional release. Some people see colors or have spiritual insights.</span></p>
-                            
-                            <h4 class="text-primary mb-3"><span data-en="After Your Session" data-sv="Efter din session">After Your Session</span></h4>
-                            <p class="mb-4"><span data-en="Many people feel deeply relaxed, energized, or both. The healing continues after your session, so stay hydrated and be gentle with yourself. Some may experience emotional releases or shifts in the days following treatment." data-sv="Många människor känner sig djupt avslappnade, energifyllda, eller båda. Läkningen fortsätter efter din session, så håll dig hydrerad och var mild mot dig själv. Vissa kan uppleva emotionella frigörelser eller förändringar under dagarna efter behandlingen.">Many people feel deeply relaxed, energized, or both. The healing continues after your session, so stay hydrated and be gentle with yourself. Some may experience emotional releases or shifts in the days following treatment.</span></p>
-                            
-                            <h4 class="text-primary mb-3"><span data-en="Reiki is Safe for Everyone" data-sv="Reiki är säkert för alla">Reiki is Safe for Everyone</span></h4>
-                            <p class="mb-0"><span data-en="Reiki is completely safe and non-invasive. It can be received by people of all ages and conditions, including pregnant women, children, and those with serious illnesses. Reiki complements but never replaces medical treatment." data-sv="Reiki är helt säkert och icke-invasivt. Det kan tas emot av människor i alla åldrar och tillstånd, inklusive gravida kvinnor, barn och de med allvarliga sjukdomar. Reiki kompletterar men ersätter aldrig medicinsk behandling.">Reiki is completely safe and non-invasive. It can be received by people of all ages and conditions, including pregnant women, children, and those with serious illnesses. Reiki complements but never replaces medical treatment.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Booking Section -->
-        <section class="page-section cta">
+        <!-- Reiki Healing Section with Om Mig style -->
+        <section class="page-section" style="padding: 5rem 0; background-color: #6b7c5d;">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner bg-faded text-center rounded">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-lower"><span data-en="Book Your Reiki Session" data-sv="Boka din Reiki-session">Book Your Reiki Session</span></span>
-                            </h2>
-                            <p class="mb-4"><span data-en="Allow the gentle power of Reiki to bring balance, peace, and healing into your life. Perfect for those seeking relaxation, stress relief, and energetic harmony." data-sv="Låt Reikis mjuka kraft bringa balans, frid och läkning till ditt liv. Perfekt för dig som söker avslappning, stresslindring och energetisk harmoni.">Allow the gentle power of Reiki to bring balance, peace, and healing into your life. Perfect for those seeking relaxation, stress relief, and energetic harmony.</span></p>
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                <a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY" target="_blank"><span data-en="Book Your Session" data-sv="Boka din session">Book Your Session</span></a>
-                                <a class="btn btn-outline-secondary btn-lg" href="index.html#contact"><span data-en="Contact Us" data-sv="Kontakta oss">Contact Us</span></a>
+                    <div class="col-xl-10 mx-auto">
+                        <div class="text-center rounded shadow-lg p-5" style="background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%); border: 3px solid #8B7355;">
+                            <!-- Header -->
+                            <div class="mb-4">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-lower" style="color: #2F170F; font-size: 2.5rem;">Reiki Healing</span>
+                                </h2>
+                            </div>
+                            
+                            <!-- Image -->
+                            <div class="text-center mb-4">
+                                <img src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" class="img-fluid rounded shadow" style="max-width: 400px; width: 400px; height: 400px; object-fit: cover;">
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="row align-items-center">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="p-4">
+                                        <p class="mb-4" style="color: #5a4a3a; text-align: center;">
+                                            <span data-en="Experience the gentle yet powerful healing energy of Reiki, a practice that promotes deep relaxation and natural healing." data-sv="Upplev Reikis mjuka men kraftfulla läkningsenergi, en praktik som främjar djup avslappning och naturlig läkning.">Experience the gentle yet powerful healing energy of Reiki, a practice that promotes deep relaxation and natural healing.</span>
+                                        </p>
+                                        
+                                        <div class="text-center mb-4">
+                                            <span style="font-size: 1.5rem; color: #a69073;">♥</span>
+                                        </div>
+                                        
+                                        <!-- What is Reiki -->
+                                        <div class="mt-5">
+                                            <h4 class="mb-3" style="color: #2F170F;" data-en="What is Reiki?" data-sv="Vad är Reiki?">What is Reiki?</h4>
+                                            <p class="mb-4" style="color: #5a4a3a; text-align: center;">
+                                                <span data-en="Reiki is an ancient Japanese healing practice that channels universal life force energy to promote balance, healing, and well-being. Through gentle touch or hands placed just above the body, this peaceful practice supports your body's natural ability to heal itself." data-sv="Reiki är en urgammal japansk läkningspraktik som kanaliserar universell livskraftsenergi för att främja balans, läkning och välbefinnande. Genom mild beröring eller händer placerade precis ovanför kroppen stöder denna fredliga praktik din kropps naturliga förmåga att läka sig själv.">Reiki is an ancient Japanese healing practice that channels universal life force energy to promote balance, healing, and well-being. Through gentle touch or hands placed just above the body, this peaceful practice supports your body's natural ability to heal itself.</span>
+                                            </p>
+                                            <p class="mb-4" style="color: #5a4a3a; text-align: center;">
+                                                <span data-en="During a Reiki session, you remain fully clothed while lying comfortably. The healing energy flows naturally to where it's needed most, bringing deep relaxation and a sense of peace and harmony." data-sv="Under en Reiki-session förblir du fullt påklädd medan du ligger bekvämt. Läkningsenergin flöder naturligt dit den behövs mest och för med sig djup avslappning och en känsla av fred och harmoni.">During a Reiki session, you remain fully clothed while lying comfortably. The healing energy flows naturally to where it's needed most, bringing deep relaxation and a sense of peace and harmony.</span>
+                                            </p>
+                                        </div>
+                                        
+                                        <!-- Benefits -->
+                                        <div class="mt-5 p-4 rounded-3" style="background: rgba(139, 115, 85, 0.1); border: 2px solid #8B7355;">
+                                            <h5 class="mb-3" style="color: #2F170F;" data-en="Benefits" data-sv="Fördelar">Benefits</h5>
+                                            <ul class="list-unstyled mb-0" style="color: #5a4a3a; text-align: center; list-style-position: inside; padding-left: 0;">
+                                                <li class="mb-2">✓ <span data-en="Deep relaxation and stress relief" data-sv="Djup avslappning och stresslindring">Deep relaxation and stress relief</span></li>
+                                                <li class="mb-2">✓ <span data-en="Balanced energy and emotional healing" data-sv="Balanserad energi och emotionell läkning">Balanced energy and emotional healing</span></li>
+                                                <li class="mb-2">✓ <span data-en="Enhanced sense of peace and well-being" data-sv="Förstärkt känsla av fred och välbefinnande">Enhanced sense of peace and well-being</span></li>
+                                                <li class="mb-2">✓ <span data-en="Support for natural healing processes" data-sv="Stöd för naturliga läkningsprocesser">Support for natural healing processes</span></li>
+                                                <li class="mb-2">✓ <span data-en="Spiritual connection and clarity" data-sv="Andlig anslutning och klarhet">Spiritual connection and clarity</span></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Booking Buttons -->
+                                        <div class="mt-5 p-4 rounded-3" style="background: rgba(139, 115, 85, 0.1); border: 2px solid #8B7355;">
+                                            <h5 class="mb-3 text-center" style="color: #2F170F;" data-en="Ready to Begin?" data-sv="Redo att börja?">Ready to Begin?</h5>
+                                            <p class="mb-4 text-center" style="color: #5a4a3a;">
+                                                <span data-en="Allow the gentle power of Reiki to bring balance and healing into your life. Experience deep relaxation and renewed vitality." data-sv="Låt Reikis mjuka kraft bringa balans och läkning in i ditt liv. Upplev djup avslappning och förnyad vitalitet.">Allow the gentle power of Reiki to bring balance and healing into your life. Experience deep relaxation and renewed vitality.</span>
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                                <a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY" target="_blank"><span data-en="Book Session" data-sv="Boka session">Book Session</span></a>
+                                                <a class="btn btn-outline-secondary btn-lg" href="index.html#contact"><span data-en="Contact Us" data-sv="Kontakta oss">Contact Us</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -307,6 +198,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        
         
         <script>
             // Language switching functionality with persistence
@@ -365,7 +257,7 @@
                     }
                 }
                 
-                // Add scroll event listener
+                // Listen for scroll events
                 window.addEventListener('scroll', handleScroll);
                 
                 // Initial check
