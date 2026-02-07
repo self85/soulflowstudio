@@ -9,7 +9,6 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -229,15 +228,15 @@
                 z-index: -1;
             }
 
-            /* Brown background for alternating sections */
-            #life-force-activation::before, #breathwork::before, #cacao-ceremonies::before {
-                background-color: #a69073 !important; /* Brown like home section */
-            }
-
-            /* Header color backgrounds for Spinal Energetics and Reiki Healing */
-            #spinal-energetics::before, #reiki-healing::before {
+            /* Header color backgrounds for Life Force Activation, Spinal Energetics and Reiki Healing */
+            #life-force-activation::before, #spinal-energetics::before, #reiki-healing::before {
                 background-color: #F0E6D2 !important;
                 display: block !important;
+            }
+
+            /* Brown background for alternating sections */
+            #breathwork::before, #cacao-ceremonies::before {
+                background-color: #a69073 !important; /* Brown like home section */
             }
 
             /* Add extra background padding under Life Force Activation buttons */
@@ -250,6 +249,11 @@
                 padding-bottom: 3rem;
             }
 
+            /* Add extra background padding under Cacao Ceremonies buttons */
+            #cacao-ceremonies {
+                padding-bottom: 0.2rem;
+            }
+
             /* Spinal Energetics text color same as Soulrise Studio */
             #spinal-energetics .section-heading-lower {
                 color: #8B4513 !important; /* Same as text-faded/Soulrise Studio */
@@ -260,10 +264,10 @@
                 color: #8B4513 !important; /* Same as text-faded/Soulrise Studio */
             }
 
-            /* Source Transmission text color to header color */
+            /* Life Force Activation text color same as Spinal Energetics */
             #life-force-activation .section-heading-upper,
             #life-force-activation .section-heading-lower {
-                color: #F0E6D2 !important; /* Header background color */
+                color: #8B4513 !important; /* Same as text-faded/Soulrise Studio */
             }
 
             /* Breathwork text color to header color */
@@ -283,6 +287,27 @@
                 z-index: 1000 !important;
             }
             
+            /* Service section headings - force smaller size and same font */
+            #life-force-activation h3,
+            #spinal-energetics h3,
+            #breathwork h3,
+            #reiki-healing h3,
+            #cacao-ceremonies h3 {
+                font-size: 1.5rem !important;
+                font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+                text-transform: none !important;
+            }
+            
+            #life-force-activation h3 span,
+            #spinal-energetics h3 span,
+            #breathwork h3 span,
+            #reiki-healing h3 span,
+            #cacao-ceremonies h3 span {
+                font-size: 1.5rem !important;
+                font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+                text-transform: none !important;
+            }
+
             /* Mobile navbar brand visibility */
             @media (max-width: 991.98px) {
                 #navbarBrand {
@@ -727,7 +752,7 @@
         </section>
         
         <!-- Services Section -->
-        <section class="page-section" id="services" style="padding: 3rem 0 5rem 0; background-color: #F0E6D2;">
+        <section class="page-section" id="services" style="padding: 1rem 0 1.5rem 0; background-color: #F0E6D2;">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-heading">
@@ -753,12 +778,12 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
-                                        <span data-en="Source Transmission - Life Force Activation" data-sv="Source Transmission - Life Force Activation">Source Transmission - Life Force Activation</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.7rem !important; font-weight: 100; text-transform: uppercase;">
+                                        <span style="font-size: 1.7rem !important;" data-en="Source Transmission - Life Force Activation" data-sv="Source Transmission - Life Force Activation">Source Transmission - Life Force Activation</span>
                                     </h3>
-                                    <p class="mb-4"><span data-en="An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session." data-sv="En intuitiv och upplevelsebaserad praktik för att väcka något inom dig och minnas vem du verkligen är. Denna kraftfulla men snälla aktivering bygger gradvis upp energin och ger dig precis vad du behöver utan att chocka ditt system. Den hjälper energin att flöda friare så du kan komma i djupare kontakt med din sanna essens och släppa gamla mönster som inte längre tjänar dig. Under aktiveringen kan du uppleva spontana rörelser, emotionella releaser, visioner, olika sensationer eller djup avslappning. Det som verkligen spelar roll är transformationen som fortsätter efter sessionen.">An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session.</span></p>
-                                    <p class="mb-4"><span data-en="I offer both 1:1 and group sessions." data-sv="Jag erbjuder både 1:1 och gruppsessioner.">I offer both 1:1 and group sessions.</span></p>
-                                    <p class="mb-4"><span data-en="Book your ONLINE sessions:" data-sv="Boka dina ONLINE sessioner:">Book your ONLINE sessions:</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session." data-sv="En intuitiv och upplevelsebaserad praktik för att väcka något inom dig och minnas vem du verkligen är. Denna kraftfulla men snälla aktivering bygger gradvis upp energin och ger dig precis vad du behöver utan att chocka ditt system. Den hjälper energin att flöda friare så du kan komma i djupare kontakt med din sanna essens och släppa gamla mönster som inte längre tjänar dig. Under aktiveringen kan du uppleva spontana rörelser, emotionella releaser, visioner, olika sensationer eller djup avslappning. Det som verkligen spelar roll är transformationen som fortsätter efter sessionen.">An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="I offer both 1:1 and group sessions." data-sv="Jag erbjuder både 1:1 och gruppsessioner.">I offer both 1:1 and group sessions.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Book your ONLINE sessions:" data-sv="Boka dina ONLINE sessioner:">Book your ONLINE sessions:</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/vcRfLGXP0qsJWEBpa0C6"><span data-en="Private Session" data-sv="Privat session">Private Session</span></a></div>
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1"><span data-en="Group Session" data-sv="Gruppsession">Group Session</span></a></div>
@@ -771,9 +796,6 @@
                 </div>
             </div>
             
-            <div class="container" style="padding: 1rem 0;">
-                <!-- Spacing between services -->
-            </div>
             
             <!-- Full width image with text overlay - outside container -->
             <div class="w-100 position-relative mb-5" id="spinal-energetics">
@@ -785,11 +807,11 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
-                                        <span data-en="Spinal Energetics" data-sv="Spinal Energetics">Spinal Energetics</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.5rem !important; font-weight: 600;">
+                                        <span style="font-size: 1.5rem !important;" data-en="Spinal Energetics" data-sv="Spinal Energetics">Spinal Energetics</span>
                                     </h3>
-                                    <p class="mb-4"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness." data-sv="Upplev den djupgående läkande kraften hos Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma. Detta tillvägagångssätt hjälper till att återställa flöde och vitalitet genom din ryggrad och ditt nervsystem, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer. Låt din kropp varva ner och hitta sitt naturliga tillstånd av balans och välbefinnande.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</span></p>
-                                    <p class="mb-4"><span data-en="Available in both individual sessions and special package deals for deeper transformation." data-sv="Tillgängligt i både individuella sessioner och specialpaket för djupare transformation.">Available in both individual sessions and special package deals for deeper transformation.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness." data-sv="Upplev den djupgående läkande kraften hos Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma. Detta tillvägagångssätt hjälper till att återställa flöde och vitalitet genom din ryggrad och ditt nervsystem, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer. Låt din kropp varva ner och hitta sitt naturliga tillstånd av balans och välbefinnande.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Available in both individual sessions and special package deals for deeper transformation." data-sv="Tillgängligt i både individuella sessioner och specialpaket för djupare transformation.">Available in both individual sessions and special package deals for deeper transformation.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy"><span data-en="Book Session ONLINE" data-sv="Boka session ONLINE">Book Session ONLINE</span></a></div>
                                         <div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="spinal-energetics-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div>
@@ -821,11 +843,11 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
-                                        <span data-en="Breathwork" data-sv="Breathwork">Breathwork</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.5rem !important; font-weight: 600;">
+                                        <span style="font-size: 1.5rem !important;" data-en="Breathwork" data-sv="Breathwork">Breathwork</span>
                                     </h3>
-                                    <p class="mb-4"><span data-en="Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom." data-sv="Medvetet andningsarbete är en urgammal praktik som använder specifika andningstekniker för att underlätta djup läkning, emotionell frigörelse och andlig uppvaknande. Din andning är en bro mellan ditt medvetna och omedvetna sinne, din kropp och ande. Genom kraftfulla andningsmönster kan vi kringgå det analytiska sinnet och ansluta direkt med din inre visdom.">Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom.</span></p>
-                                    <p class="mb-4"><span data-en="Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body." data-sv="Varje andningsarbetssession skapar en säker behållare för utforskning och läkning, vägledd av din andnings intelligens och din kropps visdom.">Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom." data-sv="Medvetet andningsarbete är en urgammal praktik som använder specifika andningstekniker för att underlätta djup läkning, emotionell frigörelse och andlig uppvaknande. Din andning är en bro mellan ditt medvetna och omedvetna sinne, din kropp och ande. Genom kraftfulla andningsmönster kan vi kringgå det analytiska sinnet och ansluta direkt med din inre visdom.">Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body." data-sv="Varje andningsarbetssession skapar en säker behållare för utforskning och läkning, vägledd av din andnings intelligens och din kropps visdom.">Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/fY4ZKrPEe7KEE8u728Y1"><span data-en="Book Private Session ONLINE" data-sv="Boka privat session ONLINE">Book Private Session ONLINE</span></a></div>
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1"><span data-en="Book Group Session ONLINE" data-sv="Boka gruppsession ONLINE">Book Group Session ONLINE</span></a></div>
@@ -838,9 +860,6 @@
                 </div>
             </div>
             
-            <div class="container" style="padding: 1rem 0;">
-                <!-- Spacing between services -->
-            </div>
             
             <!-- Full width image with text overlay - outside container -->
             <div class="w-100 position-relative mb-5" id="reiki-healing">
@@ -852,11 +871,10 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
-                                        <span data-en="Reiki Healing" data-sv="Reiki Healing">Reiki Healing</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.5rem !important; font-weight: 600;">
+                                        <span style="font-size: 1.5rem !important;" data-en="Reiki Healing" data-sv="Reiki Healing">Reiki Healing</span>
                                     </h3>
-                                    <p class="mb-4"><span data-en="Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being." data-sv="Upplev den milda men kraftfulla läkande energin från Reiki, en uråldrig japansk praktik som kanaliserar universell livskraftsenergi för att främja djup avslappning, stressreduktion och naturlig läkning. Våra certifierade Reiki-utövare skapar ett fridfullt utrymme där din kropps medfödda läkningsförmågor aktiveras och ger balans till ditt fysiska, emotionella och andliga välbefinnande.">Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being.</span></p>
-                                    <p class="mb-4"><span data-en="Perfect for those seeking gentle healing and energetic balance through this time-honored modality." data-sv="Perfekt för dig som söker mild läkning och energetisk balans genom denna åldriga modalitet.">Perfect for those seeking gentle healing and energetic balance through this time-honored modality.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being." data-sv="Upplev den milda men kraftfulla läkande energin från Reiki, en uråldrig japansk praktik som kanaliserar universell livskraftsenergi för att främja djup avslappning, stressreduktion och naturlig läkning. Våra certifierade Reiki-utövare skapar ett fridfullt utrymme där din kropps medfödda läkningsförmågor aktiveras och ger balans till ditt fysiska, emotionella och andliga välbefinnande.">Experience the gentle yet powerful healing energy of Reiki, an ancient Japanese practice that channels universal life force energy to promote deep relaxation, stress reduction, and natural healing. Our certified Reiki practitioners create a peaceful space where your body's innate healing abilities are activated, bringing balance to your physical, emotional, and spiritual well-being.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QThYzlVEbJVHDaHoH6XY"><span data-en="Book Reiki" data-sv="Boka Reiki">Book Reiki</span></a></div>
                                         <div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="reiki-healing-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div>
@@ -888,11 +906,11 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.8rem; font-weight: 600;">
-                                        <span data-en="Cacao Ceremonies" data-sv="Cacao Ceremonies">Cacao Ceremonies</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 1.5rem !important; font-weight: 600;">
+                                        <span style="font-size: 1.5rem !important;" data-en="Cacao Ceremonies" data-sv="Cacao Ceremonies">Cacao Ceremonies</span>
                                     </h3>
-                                    <p class="mb-4"><span data-en="Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment." data-sv="Upplev en kakaoceremoni där vi hedrar denna uråldriga växtmedicin tillsammans. Den ceremoniella kakaon är hjärtöppnande och fin att dela i ceremoni. Kakaons magi skapar utrymme för kontakt, läkning och gemenskap i en trygg miljö.">Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment.</span></p>
-                                    <p class="mb-4"><span data-en="Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing." data-sv="Upplev mama cacao's milda guidning genom meditation, intentionsättning och delning.">Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment." data-sv="Upplev en kakaoceremoni där vi hedrar denna uråldriga växtmedicin tillsammans. Den ceremoniella kakaon är hjärtöppnande och fin att dela i ceremoni. Kakaons magi skapar utrymme för kontakt, läkning och gemenskap i en trygg miljö.">Experience a sacred cacao ceremony where we honor this ancient plant medicine together. The ceremonial cacao is heart-opening and beautiful to share in ceremony. The magic of cacao creates space for connection, healing, and community in a safe environment.</span></p>
+                                    <p class="mb-4" style="font-size: 1.1rem;"><span data-en="Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing." data-sv="Upplev mama cacao's milda guidning genom meditation, intentionsättning och delning.">Experience the gentle guidance of mama cacao through meditation, intention setting, and sharing.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                                         <div class="intro-button"><a class="btn btn-primary btn-lg" href="mailto:lina.w.love@gmail.com?subject=Cacao Ceremony Booking&body=Hi Lina,%0A%0AI would like to learn more about your private cacao ceremonies and booking details.%0A%0AThank you!"><span data-en="Send Email for Booking Details" data-sv="Skicka e-post för bokningsdetaljer">Send Email for Booking Details</span></a></div>
                                     </div>
@@ -910,7 +928,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 mx-auto">
-                        <div class="text-center rounded shadow-lg p-5" style="background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%); border: 3px solid #8B7355;">
+                        <div class="text-center rounded shadow-lg p-3" style="background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%); border: 3px solid #8B7355;">
                             <!-- Header -->
                             <div class="mb-5">
                                 <h2 class="section-heading mb-4">
@@ -930,19 +948,19 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-10 mx-auto">
                                     <div class="p-4">
-                                        <p class="mb-4" style="color: #5a4a3a; text-align: left;">
+                                        <p class="mb-4" style="color: #5a4a3a; text-align: left; font-size: 1.1rem;">
                                             <span data-en="With a foundation as a licensed naprapath since 2012, I've always been drawn to understanding the body's natural healing mechanisms. My journey into energy work began in 2022 with my first KAP (Kundalini Activation Process) session which opened a completely new world for me and beautifully complemented my hands-on healing background. This profound experience sparked a deep calling to explore and understand the transformative power of energy healing, leading me to pursue Reiki Healing training and also KAP. Since then, I have deepened my practice in Life Force Activation and also explored Spinal Energetics. Each modality I've studied has deepened my understanding of how energy moves through the body and how we can facilitate profound healing and transformation." data-sv="Med en grund som legitimerad naprapat sedan 2012 har jag alltid varit dragen till att förstå kroppens naturliga läkningsmmekanismer. Min resa inom energiarbete började 2022 med min första KAP (Kundalini Activation Process) session som öppnade en helt ny värld för mig och vackert kompletterade min hands-on läkningsbakgrund. Denna djupa upplevelse väckte en stark kallelse att utforska och förstå den transformativa kraften hos energimedicin, vilket ledde mig till att utbilda mig inom Reiki Healing och även KAP. Sedan dess har jag fördjupat mig inom Life Force Activation och även utforskat Spinal Energetics. Varje modalitet jag studerat har fördjupat min förståelse för hur energi rör sig genom kroppen och hur vi kan underlätta djup läkning och transformation.">
                                                 With a foundation as a licensed naprapath since 2012, I've always been drawn to understanding the body's natural healing mechanisms. My journey into energy work began in 2022 with Reiki Healing training, followed by my first KAP (Kundalini Activation Process) session which opened a completely new world for me and beautifully complemented my hands-on healing background. This profound experience sparked a deep calling to explore and understand the transformative power of energy healing.
                                             </span>
                                         </p>
                                         
-                                        <p class="mb-4" style="color: #5a4a3a; text-align: left;">
+                                        <p class="mb-4" style="color: #5a4a3a; text-align: left; font-size: 1.1rem;">
                                             <span data-en="What drives me is witnessing the incredible transformations that occur when we create space for healing. My own journey has taught me that true healing happens when we honor both the body's wisdom and the soul's calling. I'm here to hold space for your unique journey of healing and transformation - your remembering." data-sv="Det som driver mig är att bevittna de otroliga transformationer som sker när vi skapar utrymme för läkning. Min egen resa har lärt mig att sann läkning sker när vi hedrar både kroppens visdom och själens kallelse. Jag är här för att hålla utrymme för din unika resa av läkning och transformation - din remembering.">
                                                 What drives me is witnessing the incredible transformations that occur when we create space for healing. My own journey has taught me that true healing happens when we honor both the body's wisdom and the soul's calling. I'm here to hold space for your unique journey of healing and transformation.
                                             </span>
                                         </p>
                                         
-                                        <p class="mb-4" style="color: #5a4a3a; text-align: left;">
+                                        <p class="mb-4" style="color: #5a4a3a; text-align: left; font-size: 1.1rem;">
                                             <span data-en="On a personal note, I am a mother of two sons and currently split my time between Spain and Sweden, which enriches both my life and my healing practice." data-sv="På ett personligt plan är jag mamma till två söner och delar för närvarande min tid mellan Spanien och Sverige, vilket berikar både mitt liv och mitt arbete.">
                                                 On a personal note, I am a mother of two sons and currently split my time between Spain and Sweden, bringing a multicultural perspective to my healing work.
                                             </span>

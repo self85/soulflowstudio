@@ -9,12 +9,55 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
+            /* Override bg-faded with Om Mig colors */
+            .bg-faded {
+                background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%) !important;
+                border: none !important;
+            }
+            
+            /* Section headings with Om Mig colors */
+            .section-heading .section-heading-lower,
+            h4, h5 {
+                color: #2F170F !important;
+            }
+            
+            /* Special styling for main section headings */
+            h3 {
+                color: #F0E6D2 !important;
+            }
+            
+            /* Body text with Om Mig colors */
+            p, li {
+                color: #5a4a3a !important;
+                font-size: 1.1rem !important;
+            }
+            
+            /* Page sections with unified green background */
+            .page-section {
+                background-color: #6b7c5d !important;
+                padding: 2rem 0 !important;
+            }
+            
+            /* Remove spacing between sections */
+            .page-section + .page-section {
+                padding-top: 0 !important;
+            }
+            
+            /* CTA section styling - restore original yellow */
+            .page-section.cta {
+                background-color: rgba(230, 167, 86, 0.9) !important;
+            }
+            
+            .cta-inner {
+                border: none !important;
+                box-shadow: 0 0.5rem 1rem rgba(47, 23, 15, 0.15) !important;
+            }
+            
             /* Hover dropdown functionality */
             .dropdown:hover .dropdown-menu {
                 display: block !important;
@@ -44,11 +87,6 @@
             .dropdown-divider {
                 border-top: 1px solid #2F170F;
                 margin: 0.25rem 0;
-            }
-            
-            /* Ensure dropdown stays visible when hovering over menu items */
-            .dropdown-toggle::after {
-                display: inline-block !important;
             }
             
             /* Language toggle button styling */
@@ -118,73 +156,147 @@
             </div>
         </nav>
         
-        <!-- Breathwork Section with Om Mig style -->
-        <section class="page-section" style="padding: 5rem 0; background-color: #6b7c5d;">
+        <!-- Hero Image Section -->
+        <section style="padding: 0; margin: 0;">
+            <!-- Full width image -->
+            <div class="w-100 position-relative">
+                <img class="intro-img img-fluid w-100" src="assets/img/breathwork.jpg" alt="Breathwork Session" style="height: 70vh; object-fit: cover; margin-top: 0;" />
+                <!-- Text overlay positioned over the image -->
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <div class="intro-text text-center p-5 rounded" style="background-color: rgba(240, 230, 210, 0.9); max-width: 800px;">
+                        <h3 class="section-heading mb-4" style="font-size: 1.5rem !important;">
+                            <span class="section-heading-lower" style="font-size: 1.5rem !important;" data-en="Breathwork" data-sv="Breathwork">Breathwork</span>
+                        </h3>
+                        <p class="mb-4"><span data-en="Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit." data-sv="Medvetet andningsarbete är en urgammal praktik som använder specifika andningstekniker för att underlätta djup läkning, emotionell frigörelse och andlig uppvaknande. Din andning är en bro mellan ditt medvetna och omedvetna sinne, din kropp och ande.">Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. Your breath is a bridge between your conscious and unconscious mind, your body and spirit.</span></p>
+                        
+                        <p class="mb-4"><span data-en="Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom, allowing suppressed emotions and limiting beliefs to surface and be released." data-sv="Genom kraftfulla andningsmönster kan vi kringgå det analytiska sinnet och ansluta direkt med din inre visdom, vilket gör att undertryckta känslor och begränsande övertygelser kan komma till ytan och frigöras.">Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom, allowing suppressed emotions and limiting beliefs to surface and be released.</span></p>
+                        
+                        <p class="mb-0"><span data-en="Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body." data-sv="Varje andningsarbetssession skapar en säker behållare för utforskning och läkning, vägledd av din andnings intelligens och din kropps visdom.">Each breathwork session creates a safe container for exploration and healing, guided by the intelligence of your breath and the wisdom of your body.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Content Section -->
+        <section class="page-section" style="margin-top: 0; padding-top: 2rem;">
             <div class="container">
+
+
+                <!-- How it Works -->
+                <div class="text-center mb-5">
+                    <h3 style="font-size: 1.8rem; font-weight: 600; color: #F0E6D2;">
+                        <span><span data-en="How Breathwork Works" data-sv="Hur andningsarbete fungerar">How Breathwork Works</span></span>
+                    </h3>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-4 mb-4">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
+                            <h4 class="text-primary mb-3"><span data-en="1. Conscious Breathing" data-sv="1. Medveten andning">1. Conscious Breathing</span></h4>
+                            <p><span data-en="Using specific breathing patterns to access altered states of consciousness and bypass the analytical mind." data-sv="Använder specifika andningsmönster för att komma åt förändrade medvetenhetstillstånd och kringgå det analytiska sinnet.">Using specific breathing patterns to access altered states of consciousness and bypass the analytical mind.</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
+                            <h4 class="text-primary mb-3"><span data-en="2. Emotional Release" data-sv="2. Emotionell frigörelse">2. Emotional Release</span></h4>
+                            <p><span data-en="Allowing suppressed emotions and limiting beliefs to surface and be released from the body and mind." data-sv="Låter undertryckta känslor och begränsande övertygelser komma till ytan och frigöras från kroppen och sinnet.">Allowing suppressed emotions and limiting beliefs to surface and be released from the body and mind.</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="bg-faded p-4 rounded shadow h-100 text-center">
+                            <h4 class="text-primary mb-3"><span data-en="3. Integration" data-sv="3. Integration">3. Integration</span></h4>
+                            <p><span data-en="Processing and integrating the insights and healing that occurred, creating lasting transformation." data-sv="Bearbetar och integrerar de insikter och läkning som inträffade och skapar varaktig transformation.">Processing and integrating the insights and healing that occurred, creating lasting transformation.</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="text-center mb-5">
+                    <h3 style="font-size: 1.8rem; font-weight: 600;">
+                        <span><span data-en="Benefits You May Experience" data-sv="Fördelar du kan uppleva">Benefits You May Experience</span></span>
+                    </h3>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-6 mb-4">
+                        <div class="bg-faded p-4 rounded shadow h-100">
+                            <h4 class="text-primary mb-3"><span data-en="Physical & Emotional" data-sv="Fysiskt & Emotionellt">Physical & Emotional</span></h4>
+                            <ul>
+                                <li><span data-en="Deep emotional release and healing" data-sv="Djup emotionell frigörelse och läkning">Deep emotional release and healing</span></li>
+                                <li><span data-en="Reduced stress and anxiety" data-sv="Minskad stress och ångest">Reduced stress and anxiety</span></li>
+                                <li><span data-en="Increased energy and vitality" data-sv="Ökad energi och vitalitet">Increased energy and vitality</span></li>
+                                <li><span data-en="Improved breathing capacity" data-sv="Förbättrad andningskapacitet">Improved breathing capacity</span></li>
+                                <li><span data-en="Release of physical tension" data-sv="Frigörelse av fysisk spänning">Release of physical tension</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="bg-faded p-4 rounded shadow h-100">
+                            <h4 class="text-primary mb-3"><span data-en="Mental & Spiritual" data-sv="Mentalt & Andligt">Mental & Spiritual</span></h4>
+                            <ul>
+                                <li><span data-en="Enhanced spiritual connection" data-sv="Förstärkt andlig anslutning">Enhanced spiritual connection</span></li>
+                                <li><span data-en="Greater self-awareness and clarity" data-sv="Större självmedvetenhet och klarhet">Greater self-awareness and clarity</span></li>
+                                <li><span data-en="Access to inner wisdom" data-sv="Tillgång till inre visdom">Access to inner wisdom</span></li>
+                                <li><span data-en="Breaking through limiting beliefs" data-sv="Bryta igenom begränsande övertygelser">Breaking through limiting beliefs</span></li>
+                                <li><span data-en="Expanded consciousness" data-sv="Utvidgat medvetande">Expanded consciousness</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What to Expect -->
+                <div class="text-center mb-5">
+                    <h3 style="font-size: 1.8rem; font-weight: 600;">
+                        <span><span data-en="What to Expect" data-sv="Vad du kan förvänta dig">What to Expect</span></span>
+                    </h3>
+                </div>
+                
                 <div class="row">
-                    <div class="col-xl-10 mx-auto">
-                        <div class="text-center rounded shadow-lg p-5" style="background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%); border: 3px solid #8B7355;">
-                            <!-- Header -->
+                    <div class="col-lg-8 mx-auto">
+                        <div class="bg-faded p-4 rounded shadow">
+                            <h4 class="text-primary mb-3"><span data-en="Preparation for Your Session" data-sv="Förberedelse för din session">Preparation for Your Session</span></h4>
+                            
+                            <p class="mb-4"><span data-en="Come with an open mind and comfortable clothing. We'll create a safe, supportive environment for your breathing journey." data-sv="Kom med ett öppet sinne och bekväma kläder. Vi kommer att skapa en säker, stödjande miljö för din andningsresa.">Come with an open mind and comfortable clothing. We'll create a safe, supportive environment for your breathing journey.</span></p>
+                            
+                            <h5 class="text-primary mb-3"><span data-en="Preparations:" data-sv="Förberedelser:">Preparations:</span></h5>
                             <div class="mb-4">
-                                <h2 class="section-heading mb-4">
-                                    <span class="section-heading-lower" style="color: #2F170F; font-size: 2.5rem;">Breathwork</span>
-                                </h2>
+                                <ul class="mb-4">
+                                    <li><span data-en="Download the Zoom app. You'll receive a Zoom link approximately 30 minutes before we start." data-sv="Ladda ner zoom appen. Du kommer få en zoomlänk ca 30 min innan vi börjar.">Download the Zoom app. You'll receive a Zoom link approximately 30 minutes before we start.</span></li>
+                                    <li><span data-en="Prepare a place where you can lie comfortably and undisturbed." data-sv="Förbered en plats där du kan ligga bekvämt och ostört.">Prepare a place where you can lie comfortably and undisturbed.</span></li>
+                                    <li><span data-en="I recommend external speakers or headphones for good sound. Please test beforehand so everything works and is charged." data-sv="Jag rekommenderar extern högtalare alternativt hörlurar för bra ljud. Testa gärna innan så allt fungerar och är laddat.">I recommend external speakers or headphones for good sound. Please test beforehand so everything works and is charged.</span></li>
+                                    <li><span data-en="Wear loose, comfortable clothing" data-sv="Bär lösa, bekväma kläder">Wear loose, comfortable clothing</span></li>
+                                    <li><span data-en="Avoid eating a heavy meal 2 hours before" data-sv="Undvik att äta en tung måltid 2 timmar innan">Avoid eating a heavy meal 2 hours before</span></li>
+                                    <li><span data-en="Bring water" data-sv="Ta med vatten">Bring water</span></li>
+                                    <li><span data-en="Set an intention for your session" data-sv="Sätt en intention för din session">Set an intention for your session</span></li>
+                                </ul>
                             </div>
                             
-                            <!-- Image -->
-                            <div class="text-center mb-4">
-                                <img src="assets/img/breathwork.jpg" alt="Breathwork Session" class="img-fluid rounded shadow" style="max-width: 400px; width: 400px; height: 400px; object-fit: cover;">
-                            </div>
+                            <h4 class="text-primary mb-3"><span data-en="During Your Session" data-sv="Under din session">During Your Session</span></h4>
+                            <p class="mb-4"><span data-en="We'll begin with guided breathing techniques and create a safe container for your experience. Allow yourself to breathe, feel, and release whatever needs to move through you." data-sv="Vi börjar med guidade andningstekniker och skapar en säker behållare för din upplevelse. Låt dig själv andas, känna och släppa det som behöver röra sig genom dig.">We'll begin with guided breathing techniques and create a safe container for your experience. Allow yourself to breathe, feel, and release whatever needs to move through you.</span></p>
                             
-                            <!-- Content -->
-                            <div class="row align-items-center">
-                                <div class="col-lg-10 mx-auto">
-                                    <div class="p-4">
-                                        <p class="mb-4" style="color: #5a4a3a; text-align: center;">
-                                            <span data-en="Transform your life through the ancient art of conscious breathing. Guide yourself into deeper states of awareness and profound healing." data-sv="Transformera ditt liv genom den urgamla konsten av medvetet andning. Vägleda dig själv till djupare tillstånd av medvetenhet och djup läkning.">Transform your life through the ancient art of conscious breathing. Guide yourself into deeper states of awareness and profound healing.</span>
-                                        </p>
-                                        
-                                        <div class="text-center mb-4">
-                                            <span style="font-size: 1.5rem; color: #a69073;">♥</span>
-                                        </div>
-                                        
-                                        
-                                        <!-- What is Breathwork -->
-                                        <div class="mt-5">
-                                            <h4 class="mb-3" style="color: #2F170F;" data-en="What is Breathwork?" data-sv="Vad är andningsarbete?">What is Breathwork?</h4>
-                                            <p class="mb-4" style="color: #5a4a3a; text-align: center;">
-                                                <span data-en="Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. By working with the breath intentionally, we can access altered states of consciousness that allow for deep transformation and self-discovery." data-sv="Medvetet andningsarbete är en urgammal praktik som använder specifika andningstekniker för att underlätta djup läkning, emotionell frigörelse och andlig uppvaknande. Genom att arbeta med andningen avsiktligt kan vi komma åt förändrade medvetenhetstillstånd som möjliggör djup transformation och självupptäckt.">Conscious Breathwork is an ancient practice that uses specific breathing techniques to facilitate profound healing, emotional release, and spiritual awakening. By working with the breath intentionally, we can access altered states of consciousness that allow for deep transformation and self-discovery.</span>
-                                            </p>
-                                            <p class="mb-4" style="color: #5a4a3a; text-align: center;">
-                                                <span data-en="Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom, allowing suppressed emotions and limiting beliefs to surface and be released." data-sv="Din andning är en bro mellan ditt medvetna och omedvetna sinne, din kropp och ande. Genom kraftfulla andningsmönster kan vi kringgå det analytiska sinnet och ansluta direkt med din inre visdom, vilket gör att undertryckta känslor och begränsande övertygelser kan komma till ytan och frigöras.">Your breath is a bridge between your conscious and unconscious mind, your body and spirit. Through powerful breathing patterns, we can bypass the analytical mind and connect directly with your inner wisdom, allowing suppressed emotions and limiting beliefs to surface and be released.</span>
-                                            </p>
-                                        </div>
-                                        
-                                        <!-- Benefits -->
-                                        <div class="mt-5 p-4 rounded-3" style="background: rgba(139, 115, 85, 0.1); border: 2px solid #8B7355;">
-                                            <h5 class="mb-3" style="color: #2F170F;" data-en="Benefits You May Experience" data-sv="Fördelar du kan uppleva">Benefits You May Experience</h5>
-                                            <ul class="list-unstyled mb-0" style="color: #5a4a3a; text-align: center; list-style-position: inside; padding-left: 0;">
-                                                <li class="mb-2">✓ <span data-en="Deep emotional release and healing" data-sv="Djup emotionell frigörelse och läkning">Deep emotional release and healing</span></li>
-                                                <li class="mb-2">✓ <span data-en="Reduced stress and anxiety" data-sv="Minskad stress och ångest">Reduced stress and anxiety</span></li>
-                                                <li class="mb-2">✓ <span data-en="Increased energy and vitality" data-sv="Ökad energi och vitalitet">Increased energy and vitality</span></li>
-                                                <li class="mb-2">✓ <span data-en="Enhanced spiritual connection" data-sv="Förstärkt andlig anslutning">Enhanced spiritual connection</span></li>
-                                                <li class="mb-2">✓ <span data-en="Greater self-awareness and clarity" data-sv="Större självmedvetenhet och klarhet">Greater self-awareness and clarity</span></li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <!-- Booking Buttons -->
-                                        <div class="mt-5 p-4 rounded-3" style="background: rgba(139, 115, 85, 0.1); border: 2px solid #8B7355;">
-                                            <h5 class="mb-3 text-center" style="color: #2F170F;" data-en="Ready to Begin?" data-sv="Redo att börja?">Ready to Begin?</h5>
-                                            <p class="mb-4 text-center" style="color: #5a4a3a;">
-                                                <span data-en="Experience the transformative power of conscious breathing. Book your session today and begin your journey of healing and self-discovery." data-sv="Upplev den transformativa kraften av medveten andning. Boka din session idag och påbörja din resa av läkning och självupptäckt.">Experience the transformative power of conscious breathing. Book your session today and begin your journey of healing and self-discovery.</span>
-                                            </p>
-                                            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                                <a class="btn btn-primary btn-lg" href="https://peach.nu/activities/fY4ZKrPEe7KEE8u728Y1" target="_blank"><span data-en="Book Session" data-sv="Boka session">Book Session</span></a>
-                                                <a class="btn btn-outline-secondary btn-lg" href="index.html#contact"><span data-en="Contact Us" data-sv="Kontakta oss">Contact Us</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <h4 class="text-primary mb-3"><span data-en="After Your Session" data-sv="Efter din session">After Your Session</span></h4>
+                            <p class="mb-4"><span data-en="Take time to integrate your experience. Stay hydrated, rest, and be gentle with yourself as you process any insights or emotions that arose." data-sv="Ta tid att integrera din upplevelse. Håll dig hydrerad, vila och var mild mot dig själv när du bearbetar alla insikter eller känslor som uppstod.">Take time to integrate your experience. Stay hydrated, rest, and be gentle with yourself as you process any insights or emotions that arose.</span></p>
+                            
+                            <p class="mb-4"><strong><span data-en="Contact me for any questions:" data-sv="Kontakta mig för frågor:">Contact me for any questions:</span></strong> <a href="mailto:lina.w.love@gmail.com">lina.w.love@gmail.com</a></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="page-section cta" style="padding: 2rem 0;">
+            <div class="container" style="padding: 2rem 0;">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded shadow-lg p-5" style="margin: 2rem 0 0.5rem 0;">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower"><span data-en="Book Your Session" data-sv="Boka din session">Book Your Session</span></span>
+                            </h2>
+                            <p class="mb-4"><span data-en="Experience the transformative power of conscious breathing. Book your session today and begin your journey of healing and self-discovery." data-sv="Upplev den transformativa kraften av medveten andning. Boka din session idag och påbörja din resa av läkning och självupptäckt.">Experience the transformative power of conscious breathing. Book your session today and begin your journey of healing and self-discovery.</span></p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a class="btn btn-primary btn-lg" href="https://peach.nu/activities/fY4ZKrPEe7KEE8u728Y1" target="_blank"><span data-en="Book Private Session" data-sv="Boka privat session">Book Private Session</span></a>
+                                <a class="btn btn-outline-primary btn-lg" href="https://peach.nu/c/MSZTiMAPsmeEmWZwJNp1" target="_blank"><span data-en="Join Group Session" data-sv="Gå med i gruppsession">Join Group Session</span></a>
+                                <a class="btn btn-outline-secondary btn-lg" href="index.html#contact"><span data-en="Contact Us" data-sv="Kontakta oss">Contact Us</span></a>
                             </div>
                         </div>
                     </div>
