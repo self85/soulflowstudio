@@ -14,9 +14,33 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            /* Hover dropdown functionality */
-            .dropdown:hover .dropdown-menu {
-                display: block !important;
+            /* Hover dropdown functionality for desktop */
+            @media (min-width: 992px) {
+                .dropdown:hover .dropdown-menu {
+                    display: block !important;
+                }
+            }
+            
+            /* Mobile dropdown styling - remove any conflicting styles */
+            @media (max-width: 991.98px) {
+                .dropdown-menu {
+                    position: absolute !important;
+                    display: none !important;
+                    background-color: #8B7355 !important;
+                    border: 1px solid #2F170F !important;
+                    border-radius: 0.5rem !important;
+                    box-shadow: 0 0.5rem 1rem rgba(47, 23, 15, 0.15) !important;
+                }
+                
+                .dropdown-menu.show {
+                    display: block !important;
+                }
+                
+                /* Ensure dropdown toggle works */
+                .dropdown-toggle::after {
+                    display: inline-block !important;
+                    margin-left: 0.5rem !important;
+                }
             }
             
             .dropdown-menu {
@@ -187,6 +211,26 @@
                 color: #000;
                 border-color: #e6a756;
             }
+            
+            /* Header scroll behavior */
+            header {
+                position: relative;
+                z-index: 1;
+                transition: all 0.3s ease !important;
+            }
+            
+            header.hidden {
+                transform: translateY(-100%) !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
+            
+            #mainNav {
+                transition: background-color 0.3s ease !important;
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1030 !important;
+            }
 
             /* Full background for contact section */
             #contact {
@@ -314,6 +358,14 @@
                     opacity: 1 !important; /* Always show on mobile */
                 }
                 
+                /* Fix navbar visibility on mobile */
+                #mainNav {
+                    position: sticky !important;
+                    top: 0 !important;
+                    z-index: 1030 !important;
+                    width: 100% !important;
+                }
+                
                 /* Add top padding to home section on mobile only */
                 #home {
                     padding-top: 6rem !important;
@@ -324,14 +376,14 @@
             
             /* Mobile layout for services - convert full-width sections to standard layout */
             @media (max-width: 768px) {
-                /* Convert all full-width service sections to mobile layout */
-                #life-force-activation, 
-                #spinal-energetics, 
-                #breathwork, 
-                #reiki-healing, 
-                #cacao-ceremonies {
+                /* Convert all full-width service sections to mobile layout - force zero margins */
+                #life-force-activation.mb-5,
+                #spinal-energetics.mb-5,
+                #breathwork.mb-5,
+                #reiki-healing.mb-5,
+                #cacao-ceremonies.mb-5 {
+                    margin-bottom: 0.5rem !important;
                     margin-top: 0 !important;
-                    margin-bottom: 3rem !important;
                     position: static !important;
                     padding: 0 15px !important;
                 }
@@ -368,19 +420,13 @@
                 }
                 
                 /* Hide title overlays on mobile */
-                #life-force-activation .position-absolute:first-of-type,
-                #spinal-energetics .position-absolute:first-of-type,
                 #breathwork .position-absolute:first-of-type,
-                #reiki-healing .position-absolute:first-of-type,
                 #cacao-ceremonies .position-absolute:first-of-type {
                     display: none !important;
                 }
                 
                 /* Hide desktop title overlays on mobile */
-                #life-force-activation .position-absolute:nth-of-type(1),
-                #spinal-energetics .position-absolute:nth-of-type(1),
                 #breathwork .position-absolute:nth-of-type(1),
-                #reiki-healing .position-absolute:nth-of-type(1),
                 #cacao-ceremonies .position-absolute:nth-of-type(1) {
                     display: none !important;
                 }
@@ -437,14 +483,87 @@
                     width: 250px !important;
                     height: 250px !important;
                     transform: scale(1) !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    display: block !important;
+                    position: relative !important;
+                    left: 50% !important;
+                    transform: translateX(-50%) !important;
                 }
                 
                 #about .section-heading-lower {
                     font-size: 2rem !important;
                 }
                 
+                /* Make "Our Services" heading smaller on mobile */
+                #services .section-heading-lower {
+                    font-size: 2rem !important;
+                }
+                
+                /* Make "Choose Your Journey" heading same size as service headings on mobile */
+                #packages .section-heading-lower {
+                    font-size: 1.8rem !important;
+                }
+                
+                /* Make "Online Group Sessions" heading same size as service headings on mobile */
+                #weekly-classes .section-heading-lower {
+                    font-size: 1.8rem !important;
+                }
+                
+                /* Make "Connect From Anywhere" heading smaller on mobile */
+                #contact .section-heading-lower {
+                    font-size: 1.6rem !important;
+                }
+                
+                
+                
+                
+                /* Make service headings smaller on mobile */
+                #spinal-energetics h3,
+                #breathwork h3,
+                #reiki-healing h3,
+                #cacao-ceremonies h3 {
+                    font-size: 1.8rem !important;
+                    margin-bottom: 0.5rem !important;
+                    margin-top: 0.5rem !important;
+                    line-height: 1.2 !important;
+                }
+                
+                #spinal-energetics h3 span,
+                #breathwork h3 span,
+                #reiki-healing h3 span,
+                #cacao-ceremonies h3 span {
+                    font-size: 1.8rem !important;
+                }
+                
+                /* Make sure line breaks work on mobile for Source Transmission */
+                #life-force-activation h3 .d-md-none {
+                    line-height: 1.3 !important;
+                    display: inline-block !important;
+                    white-space: normal !important;
+                    text-align: center !important;
+                    width: 100% !important;
+                }
+                
+                
+                
                 #about .p-4 {
                     padding: 1rem !important;
+                }
+                
+                /* Change background of spacing containers to match service sections */
+                .container[style="padding: 1rem 0;"] {
+                    background-color: transparent !important;
+                    padding: 0 !important;
+                    height: 0.5rem !important;
+                    overflow: hidden !important;
+                }
+                
+                /* Alternative: force all containers between services to have no visible content */
+                #services ~ .container:not(.cta-inner) {
+                    background-color: transparent !important;
+                    height: 0.5rem !important;
+                    overflow: hidden !important;
                 }
             }
             
@@ -465,19 +584,32 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#" onclick="window.scrollTo(0,0); return false;" data-en="Home" data-sv="Hem">Home</a></li>
-                        <li class="nav-item dropdown px-lg-4">
+                        <!-- Desktop dropdown -->
+                        <li class="nav-item dropdown px-lg-4 d-none d-lg-block">
                             <a class="nav-link dropdown-toggle text-uppercase" href="#services" id="servicesDropdown" role="button" aria-expanded="false" data-en="Services" data-sv="Tjänster">
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#services" data-en="All Services" data-sv="Alla tjänster">All Services</a></li>
+                                <li><a class="dropdown-item" href="index.html#services" data-en="All Services" data-sv="Alla tjänster">All Services</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#life-force-activation">Source Transmission - Life Force Activation</a></li>
-                                <li><a class="dropdown-item" href="#spinal-energetics">Spinal Energetics</a></li>
-                                <li><a class="dropdown-item" href="#breathwork">Breathwork</a></li>
-                                <li><a class="dropdown-item" href="#reiki-healing">Reiki Healing</a></li>
-                                <li><a class="dropdown-item" href="#cacao-ceremonies" data-en="Cacao Ceremonies" data-sv="Kakaoceremoni">Cacao Ceremonies</a></li>
+                                <li><a class="dropdown-item" href="index.html#life-force-activation">Source Transmission - Life Force Activation</a></li>
+                                <li><a class="dropdown-item" href="index.html#spinal-energetics">Spinal Energetics</a></li>
+                                <li><a class="dropdown-item" href="index.html#breathwork">Breathwork</a></li>
+                                <li><a class="dropdown-item" href="index.html#reiki-healing">Reiki Healing</a></li>
+                                <li><a class="dropdown-item" href="index.html#cacao-ceremonies" data-en="Cacao Ceremonies" data-sv="Kakaoceremoni">Cacao Ceremonies</a></li>
                             </ul>
+                        </li>
+                        
+                        <!-- Mobile: Collapsible services menu -->
+                        <li class="nav-item px-lg-4 d-lg-none">
+                            <a class="nav-link text-uppercase" href="#services" data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="false" data-en="Services ▼" data-sv="Tjänster ▼">Services ▼</a>
+                            <div class="collapse" id="mobileServicesMenu">
+                                <a class="nav-link" href="index.html#life-force-activation" style="padding-left: 2rem; font-size: 0.9rem;">Source Transmission</a>
+                                <a class="nav-link" href="index.html#spinal-energetics" style="padding-left: 2rem; font-size: 0.9rem;">Spinal Energetics</a>
+                                <a class="nav-link" href="index.html#breathwork" style="padding-left: 2rem; font-size: 0.9rem;">Breathwork</a>
+                                <a class="nav-link" href="index.html#reiki-healing" style="padding-left: 2rem; font-size: 0.9rem;">Reiki Healing</a>
+                                <a class="nav-link" href="index.html#cacao-ceremonies" style="padding-left: 2rem; font-size: 0.9rem;" data-en="Cacao Ceremonies" data-sv="Kakaoceremoni">Cacao Ceremonies</a>
+                            </div>
                         </li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#about" data-en="About" data-sv="Om mig">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a></li>
@@ -504,7 +636,7 @@
                             <span class="section-heading-lower">Your Journey Awaits</span>
                         </h2>
                         <p class="mb-3" data-en="Feel the whisper of your soul calling you home to yourself. There's a light within you waiting to shine, a vibrant energy longing to flow freely. It's about remembering who you truly are." data-sv="Känn hur din själ viskar och kallar dig hem till dig själv. Det finns ett ljus inom dig som väntar på att skina, en levande energi som längtar efter att flöda fritt. Det handlar om att komma ihåg vem du verkligen är.">Feel the whisper of your soul calling you home to yourself. There's a light within you waiting to shine, a vibrant energy longing to flow freely. It's about remembering who you truly are.</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-lg" href="mailto:lina.w.love@gmail.com"><span data-en="Book Your Free Call" data-sv="Boka ditt gratis samtal">Book Your Free Call</span></a></div>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-lg" href="https://www.bokadirekt.se/boka-tjanst/holistisk-halsa-naprapati-133861/boka-gratis-samtal-3414503" target="_blank"><span data-en="Book Your Free Call" data-sv="Boka ditt gratis samtal">Book Your Free Call</span></a></div>
                     </div>
                 </div>
             </div>
@@ -763,13 +895,7 @@
             </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="life-force-activation">
-                <!-- Mobile title (hidden on desktop) -->
-                <div class="d-block d-md-none text-center mb-3">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-lower">Source Transmission - Life Force Activation</span>
-                    </h2>
-                </div>
+            <div class="w-100 position-relative" id="life-force-activation" style="margin-bottom: 0.5rem;">
                 <img class="img-fluid w-100" src="assets/img/life-force-activation.jpg" alt="Life Force Activation Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
@@ -778,8 +904,12 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="p-5 rounded" style="background-color: rgba(240, 230, 210, 0.95);">
-                                    <h3 class="text-center mb-4" style="color: #2F170F; font-size: 2rem !important; font-weight: 100; text-transform: uppercase;">
-                                        <span style="font-size: 2rem !important;" data-en="Source Transmission - Life Force Activation" data-sv="Source Transmission - Life Force Activation">Source Transmission - Life Force Activation</span>
+                                    <h3 class="text-center mb-4" style="color: #2F170F; font-weight: 100; text-transform: uppercase;">
+                                        <span class="d-none d-md-inline" style="font-size: 2rem;" data-en="Source Transmission Life Force Activation" data-sv="Source Transmission Life Force Activation">Source Transmission Life Force Activation</span>
+                                        <div class="d-md-none" style="font-size: 1.8rem; line-height: 1.3; text-align: center;" data-en="Source Transmission Life Force Activation" data-sv="Source Transmission Life Force Activation">
+                                            <div>Source Transmission</div>
+                                            <div>Life Force Activation</div>
+                                        </div>
                                     </h3>
                                     <p class="mb-4" style="font-size: 1.1rem; font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;"><span data-en="An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session." data-sv="En intuitiv och upplevelsebaserad praktik för att väcka något inom dig och minnas vem du verkligen är. Denna kraftfulla men snälla aktivering bygger gradvis upp energin och ger dig precis vad du behöver utan att chocka ditt system. Den hjälper energin att flöda friare så du kan komma i djupare kontakt med din sanna essens och släppa gamla mönster som inte längre tjänar dig. Under aktiveringen kan du uppleva spontana rörelser, emotionella releaser, visioner, olika sensationer eller djup avslappning. Det som verkligen spelar roll är transformationen som fortsätter efter sessionen.">An intuitive, experience-based practice to awaken something within you and remember who you truly are. This gentle yet powerful activation gradually builds energy, giving you exactly what you need without overwhelming your system. It helps energy flow more freely, connecting you to your true essence while releasing old patterns that no longer serve you. During activation, you may experience spontaneous movements, emotional releases, visions, various sensations, or deep relaxation. What matters most is the transformation that continues after the session.</span></p>
                                     <p class="mb-4" style="font-size: 1.1rem; font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;"><span data-en="I offer both 1:1 and group sessions." data-sv="Jag erbjuder både 1:1 och gruppsessioner.">I offer both 1:1 and group sessions.</span></p>
@@ -798,7 +928,7 @@
             
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="spinal-energetics">
+            <div class="w-100 position-relative" id="spinal-energetics" style="margin-bottom: 0.5rem;">
                 <img class="img-fluid w-100" src="assets/img/spinal-energetics.jpg" alt="Spinal Energetics Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
@@ -823,12 +953,9 @@
                 </div>
             </div>
             
-            <div class="container" style="padding: 1rem 0;">
-                <!-- Spacing between services -->
-            </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="breathwork">
+            <div class="w-100 position-relative" id="breathwork" style="margin-bottom: 0.5rem;">
                 <!-- Mobile title (hidden on desktop) -->
                 <div class="d-block d-md-none text-center mb-3">
                     <h2 class="section-heading mb-0">
@@ -862,7 +989,7 @@
             
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="reiki-healing">
+            <div class="w-100 position-relative" id="reiki-healing" style="margin-bottom: 0.5rem;">
                 <img class="img-fluid w-100" src="assets/img/reiki-healing.jpg" alt="Reiki Healing Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
                 <!-- Text overlay positioned over the image -->
@@ -886,12 +1013,9 @@
                 </div>
             </div>
             
-            <div class="container" style="padding: 1rem 0;">
-                <!-- Spacing between services -->
-            </div>
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative mb-5" id="cacao-ceremonies">
+            <div class="w-100 position-relative" id="cacao-ceremonies" style="margin-bottom: 0.5rem;">
                 <!-- Mobile title (hidden on desktop) -->
                 <div class="d-block d-md-none text-center mb-3">
                     <h2 class="section-heading mb-0">
@@ -1081,6 +1205,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        
         <!-- Instagram Embed JS-->
         <script async src="//www.instagram.com/embed.js"></script>
         
@@ -1125,28 +1250,77 @@
                     applyTranslations();
                 });
                 
-                // Navbar brand visibility based on header visibility
+                // Navbar brand visibility and header hiding based on scroll
                 const header = document.querySelector('header');
                 const navbarBrand = document.getElementById('navbarBrand');
+                const navbar = document.getElementById('mainNav');
                 
                 function handleScroll() {
-                    const headerRect = header.getBoundingClientRect();
-                    const headerVisible = headerRect.bottom > 0;
+                    const scrollPosition = window.scrollY;
+                    const isMobile = window.innerWidth < 992;
+                    const triggerPoint = isMobile ? 50 : 100; // Lower trigger point on mobile
                     
-                    if (headerVisible) {
-                        // Header is visible, hide navbar brand
-                        navbarBrand.style.opacity = '0';
-                    } else {
-                        // Header is not visible, show navbar brand
+                    if (scrollPosition > triggerPoint) {
+                        // Scrolled down - hide header and show navbar brand
+                        if (isMobile) {
+                            // On mobile, completely hide header and make navbar compact
+                            header.style.display = 'none';
+                            navbar.style.padding = '0.5rem 0';
+                        } else {
+                            header.classList.add('hidden');
+                        }
                         navbarBrand.style.opacity = '1';
+                        navbar.style.backgroundColor = 'rgba(139, 115, 85, 1)';
+                    } else {
+                        // At top - show header and hide navbar brand  
+                        if (isMobile) {
+                            header.style.display = 'block';
+                            navbar.style.padding = '';
+                        } else {
+                            header.classList.remove('hidden');
+                        }
+                        navbarBrand.style.opacity = '0';
+                        navbar.style.backgroundColor = 'rgba(139, 115, 85, 0.95)';
                     }
                 }
                 
                 // Listen for scroll events
                 window.addEventListener('scroll', handleScroll);
                 
+                // Handle window resize
+                window.addEventListener('resize', handleScroll);
+                
                 // Initial check
                 handleScroll();
+                
+                // Close mobile menu when clicking on specific nav links
+                const navbarCollapse = document.getElementById('navbarSupportedContent');
+                
+                // Close menu for Home, About, Contact (but NOT Services main link)
+                const mainNavLinks = document.querySelectorAll('a[href="#"]:not([data-bs-toggle]), a[href*="#about"], a[href*="#contact"]');
+                mainNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth < 992) {
+                            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                                toggle: false
+                            });
+                            bsCollapse.hide();
+                        }
+                    });
+                });
+                
+                // Close menu when clicking on service submenu items (specific services)
+                const serviceSubLinks = document.querySelectorAll('#mobileServicesMenu a');
+                serviceSubLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth < 992) {
+                            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                                toggle: false
+                            });
+                            bsCollapse.hide();
+                        }
+                    });
+                });
             });
         </script>
     </body>

@@ -110,6 +110,60 @@
                     opacity: 1 !important; /* Always show on mobile */
                 }
             }
+            
+            /* Mobile responsive adjustments */
+            @media (max-width: 768px) {
+                /* Fix overlay positioning on mobile - convert to static layout */
+                .position-absolute {
+                    position: static !important;
+                    transform: none !important;
+                }
+                
+                /* Make hero section stack vertically on mobile */
+                .intro-text {
+                    max-width: 100% !important;
+                    padding: 2rem !important;
+                    margin: 1rem auto !important;
+                    position: static !important;
+                    z-index: auto !important;
+                }
+                
+                /* Adjust hero text size */
+                .intro-text h3 {
+                    font-size: 1.2rem !important;
+                }
+                
+                /* Make content sections more mobile-friendly */
+                .container {
+                    padding: 0 1rem !important;
+                }
+                
+                /* Adjust column layout for mobile */
+                .col-lg-4 {
+                    margin-bottom: 2rem !important;
+                }
+                
+                /* Make section headings smaller */
+                .page-section h3 {
+                    font-size: 1.5rem !important;
+                }
+                
+                /* Adjust hero image height for mobile */
+                .intro-img {
+                    height: 50vh !important;
+                }
+                
+                /* Ensure proper stacking order */
+                .page-section {
+                    position: relative !important;
+                    z-index: 1 !important;
+                }
+                
+                /* Make "Book Your Session" heading smaller on mobile */
+                .cta-inner h3 {
+                    font-size: 1.2rem !important;
+                }
+            }
 
             /* Service section headings - match Source Transmission - Life Force Activation style */
             h3, h4, h5,
@@ -137,7 +191,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#home">Home</a></li>
-                        <li class="nav-item dropdown px-lg-4">
+                        <!-- Desktop dropdown -->
+                        <li class="nav-item dropdown px-lg-4 d-none d-lg-block">
                             <a class="nav-link dropdown-toggle text-uppercase" href="index.html#services" id="servicesDropdown" role="button" aria-expanded="false">
                                 Services
                             </a>
@@ -150,6 +205,18 @@
                                 <li><a class="dropdown-item" href="index.html#reiki-healing">Reiki Healing</a></li>
                                 <li><a class="dropdown-item" href="index.html#cacao-ceremonies">Cacao Ceremonies</a></li>
                             </ul>
+                        </li>
+                        
+                        <!-- Mobile: Collapsible services menu -->
+                        <li class="nav-item px-lg-4 d-lg-none">
+                            <a class="nav-link text-uppercase" href="index.html#services" data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="false">Services ▼</a>
+                            <div class="collapse" id="mobileServicesMenu">
+                                <a class="nav-link" href="index.html#life-force-activation" style="padding-left: 2rem; font-size: 0.9rem;">Source Transmission</a>
+                                <a class="nav-link" href="index.html#spinal-energetics" style="padding-left: 2rem; font-size: 0.9rem;">Spinal Energetics</a>
+                                <a class="nav-link" href="index.html#breathwork" style="padding-left: 2rem; font-size: 0.9rem;">Breathwork</a>
+                                <a class="nav-link" href="index.html#reiki-healing" style="padding-left: 2rem; font-size: 0.9rem;">Reiki Healing</a>
+                                <a class="nav-link" href="index.html#cacao-ceremonies" style="padding-left: 2rem; font-size: 0.9rem;">Cacao Ceremonies</a>
+                            </div>
                         </li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#about" data-en="About" data-sv="Om mig">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html#contact">Contact</a></li>
