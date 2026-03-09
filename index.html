@@ -283,19 +283,13 @@
                 background-color: #a69073 !important; /* Brown like home section */
             }
 
-            /* Add extra background padding under Life Force Activation buttons */
-            #life-force-activation {
-                padding-bottom: 3rem;
-            }
-
-            /* Add extra background padding under Breathwork buttons */
-            #breathwork {
-                padding-bottom: 3rem;
-            }
-
-            /* Add extra background padding under Cacao Ceremonies buttons */
+            /* Consistent padding for all service sections */
+            #life-force-activation,
+            #spinal-energetics,
+            #breathwork,
+            #reiki-healing,
             #cacao-ceremonies {
-                padding-bottom: 0.2rem;
+                padding-bottom: 3rem;
             }
 
             /* Spinal Energetics text color same as Soulrise Studio */
@@ -387,7 +381,7 @@
                 #breathwork.mb-5,
                 #reiki-healing.mb-5,
                 #cacao-ceremonies.mb-5 {
-                    margin-bottom: 0.5rem !important;
+                    margin-bottom: 0 !important;
                     margin-top: 0 !important;
                     position: static !important;
                     padding: 0 15px !important;
@@ -431,11 +425,12 @@
                 }
 
                 #cacao-ceremonies > .d-block {
-                    display: none !important;
+                    margin-bottom: 0 !important;
                 }
 
-                #breathwork > .d-block.d-md-none {
-                    display: none !important;
+                #breathwork > .d-block.d-md-none,
+                #cacao-ceremonies > .d-block.d-md-none {
+                    margin-bottom: 0 !important;
                 }
                 
                 /* Hide desktop title overlays on mobile */
@@ -482,7 +477,8 @@
                 #cacao-ceremonies .position-absolute:last-of-type .p-5 {
                     background-color: #F0E6D2 !important;
                     margin-top: -1.5rem !important;
-                    padding: 1.5rem !important;
+                    margin-bottom: 0 !important;
+                    padding: 1rem 1.5rem 0.5rem 1.5rem !important;
                     border-radius: 0.5rem !important;
                 }
                 
@@ -550,7 +546,7 @@
                 #breathwork,
                 #reiki-healing,
                 #cacao-ceremonies {
-                    margin-bottom: 1rem !important;
+                    margin-bottom: 0 !important;
                     margin-top: 0 !important;
                 }
 
@@ -559,9 +555,39 @@
                 #breathwork .position-absolute:last-of-type .p-5,
                 #reiki-healing .position-absolute:last-of-type .p-5,
                 #cacao-ceremonies .position-absolute:last-of-type .p-5 {
-                    padding-bottom: 1rem !important;
+                    padding-bottom: 0.5rem !important;
                     padding-top: 1rem !important;
                     margin-top: -0.5rem !important;
+                    margin-bottom: 0 !important;
+                }
+
+                #life-force-activation .d-flex.flex-wrap,
+                #spinal-energetics .d-flex.flex-wrap,
+                #breathwork .d-flex.flex-wrap,
+                #reiki-healing .d-flex.flex-wrap,
+                #cacao-ceremonies .d-flex.flex-wrap {
+                    margin-bottom: 0 !important;
+                }
+
+                #life-force-activation .w-100,
+                #spinal-energetics .w-100,
+                #breathwork .w-100,
+                #reiki-healing .w-100,
+                #cacao-ceremonies .w-100 {
+                    margin-bottom: 0 !important;
+                }
+
+                #breathwork > .d-block.d-md-none,
+                #cacao-ceremonies > .d-block.d-md-none {
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    padding-top: 0 !important;
+                }
+
+                #breathwork > .d-block.d-md-none .section-heading,
+                #cacao-ceremonies > .d-block.d-md-none .section-heading {
+                    margin-top: 0.25rem !important;
+                    margin-bottom: 0.25rem !important;
                 }
 
 
@@ -674,7 +700,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav" style="margin-bottom: 0;">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html" id="navbarBrand" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">
+                    <div>Soulrise Studio</div>
+                    <div style="font-size: 0.55rem; letter-spacing: 0.2em; font-weight: 400; color: #c4883a; text-align: center;">awaken your life force</div>
+                </a>
+                <a class="navbar-brand text-uppercase fw-bold d-none d-lg-block" href="index.html" id="navbarBrandDesktop" style="font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease;">Soulrise Studio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
@@ -981,7 +1011,7 @@
         </section>
 
         <!-- Services Section -->
-        <section class="page-section" id="services" style="padding: 1rem 0 1.5rem 0; background-color: #F0E6D2;">
+        <section class="page-section" id="services" style="padding: 1rem 0 1.5rem 0; margin-bottom: 0; background-color: #F0E6D2;">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-heading">
@@ -1055,9 +1085,6 @@
             <div class="w-100 position-relative" id="breathwork" style="margin-bottom: 0.5rem;">
                 <!-- Mobile title (hidden on desktop) -->
                 <div class="d-block d-md-none text-center mb-3">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-lower">Breathwork</span>
-                    </h2>
                 </div>
                 <img class="img-fluid w-100" src="assets/img/breathwork.jpg" alt="Breathwork Session" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
@@ -1115,9 +1142,6 @@
             <div class="w-100 position-relative" id="cacao-ceremonies" style="margin-bottom: 0.5rem;">
                 <!-- Mobile title (hidden on desktop) -->
                 <div class="d-block d-md-none text-center mb-3">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-lower">Cacao Ceremonies</span>
-                    </h2>
                 </div>
                 <img class="img-fluid w-100" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" style="height: calc(80vh + 6rem); object-fit: cover;" />
                 
@@ -1145,13 +1169,13 @@
         </section>
         
         <!-- About Me Section -->
-        <section class="page-section" id="about" style="padding: 5rem 0; background-color: #6b7c5d;">
+        <section class="page-section" id="about" style="padding: 2rem 0 5rem 0; margin-top: 0.5rem; background-color: #6b7c5d;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 mx-auto">
                         <div class="text-center rounded shadow-lg p-3" style="background: linear-gradient(135deg, #F0E6D2 0%, #faf0e6 100%); border: 3px solid #8B7355;">
                             <!-- Header -->
-                            <div class="mb-5">
+                            <div class="mb-5" style="padding-top: 3.5rem;">
                                 <h2 class="section-heading mb-4">
                                     <span class="section-heading-lower" style="color: #2F170F; font-size: 2.5rem;" data-en="About Me" data-sv="Om mig">About Me</span>
                                 </h2>
@@ -1350,6 +1374,7 @@
                 // Navbar brand visibility and header hiding based on scroll
                 const header = document.querySelector('header');
                 const navbarBrand = document.getElementById('navbarBrand');
+                const navbarBrandDesktop = document.getElementById('navbarBrandDesktop');
                 const navbar = document.getElementById('mainNav');
                 
                 function handleScroll() {
@@ -1367,9 +1392,10 @@
                             header.classList.add('hidden');
                         }
                         navbarBrand.style.opacity = '1';
+                        if (navbarBrandDesktop) navbarBrandDesktop.style.opacity = '1';
                         navbar.style.backgroundColor = 'rgba(139, 115, 85, 1)';
                     } else {
-                        // At top - show header and hide navbar brand  
+                        // At top - show header and hide navbar brand
                         if (isMobile) {
                             header.style.display = 'block';
                             navbar.style.padding = '';
@@ -1377,7 +1403,8 @@
                             header.classList.remove('hidden');
                         }
                         navbarBrand.style.opacity = '0';
-                        navbar.style.backgroundColor = 'rgba(139, 115, 85, 0.95)';
+                        if (navbarBrandDesktop) navbarBrandDesktop.style.opacity = '0';
+                        navbar.style.backgroundColor = 'rgba(139, 115, 85, 1)';
                     }
                 }
                 

@@ -11002,6 +11002,14 @@ p {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
 
+@media (max-width: 991px) {
+  .btn-lg, .btn-group-lg > .btn {
+    --bs-btn-padding-y: 0.4rem;
+    --bs-btn-padding-x: 0.8rem;
+    --bs-btn-font-size: 0.95rem;
+  }
+}
+
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
     position: relative;
