@@ -10863,6 +10863,43 @@ p {
   margin-bottom: 5rem;
 }
 
+#services {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+  #cacao-ceremonies {
+    background-color: #6b7c5d;
+  }
+}
+
+#about {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 767px) {
+  #about .mb-4 {
+    margin-bottom: 0rem !important;
+  }
+  #about .mt-5 {
+    margin-top: 0.25rem !important;
+  }
+  #about .mb-5 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+#testimonials {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#contact {
+  margin-top: 0 !important;
+}
+
 .section-heading {
   text-transform: uppercase;
 }

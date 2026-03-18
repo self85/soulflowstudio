@@ -766,7 +766,7 @@
                         
                         <!-- Mobile: Collapsible services menu -->
                         <li class="nav-item px-lg-4 d-lg-none">
-                            <a class="nav-link text-uppercase" href="#services" data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="false" data-en="Services ▼" data-sv="Tjänster ▼">Services ▼</a>
+                            <a class="nav-link text-uppercase" href="#services" data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="false" aria-controls="mobileServicesMenu" data-en="Services ▼" data-sv="Tjänster ▼">Services ▼</a>
                             <div class="collapse" id="mobileServicesMenu">
                                 <a class="nav-link" href="index.html#life-force-activation" style="padding-left: 2rem; font-size: 0.9rem;">Source Transmission</a>
                                 <a class="nav-link" href="index.html#spinal-energetics" style="padding-left: 2rem; font-size: 0.9rem;">Spinal Energetics</a>
@@ -776,12 +776,13 @@
                             </div>
                         </li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#about" data-en="About" data-sv="Om mig">About</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#testimonials" data-en="Client Love" data-sv="Client Love">Client Love</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-lg-4">
-                            <button id="languageToggle" class="btn btn-outline-light">
-                                <i class="fas fa-globe me-2"></i>
+                            <button id="languageToggle" class="btn btn-outline-light" aria-label="Switch language">
+                                <i class="fas fa-globe me-2" aria-hidden="true"></i>
                                 <span id="langText">Svenska</span>
                             </button>
                         </li>
@@ -792,7 +793,7 @@
         <section class="page-section clearfix" id="home" style="padding-top: 0; margin-top: 0;">
             <!-- Full width image -->
             <div class="w-100 position-relative">
-                <img class="intro-img img-fluid w-100" src="assets/img/intro.jpg" alt="..." style="height: 70vh; object-fit: cover;" />
+                <img class="intro-img img-fluid w-100" src="assets/img/intro.jpg" alt="Soulrise Studio - healing and energy work session environment" style="height: 70vh; object-fit: cover;" />
                 <!-- Text overlay positioned over the image -->
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <div class="intro-text text-center p-5 rounded" style="background-color: rgba(240, 230, 210, 0.9); max-width: 800px;">
@@ -827,7 +828,6 @@
                             <div class="card-body text-center p-4">
                                 <div class="display-4 fw-bold text-primary mb-2">8-12</div>
                                 <p class="text-muted mb-3" data-en="weeks" data-sv="veckor">weeks</p>
-                                <div class="fw-bold text-success mb-3" style="font-size: 1.5rem;">7500 kr</div>
                                 <h5 class="mb-3" data-en="Work with me personally" data-sv="Jobba med mig personligt">Work with me personally</h5>
                                 <ul class="list-unstyled text-start mb-4">
                                     <li class="mb-2">✨ <span data-en="6 individual 1-on-1 sessions (2 hours each)" data-sv="6 individuella 1-till-1 sessioner (2 timmar varje)">6 individual 1-on-1 sessions (2 hours each)</span></li>
@@ -1054,7 +1054,7 @@
         </section>
 
         <!-- Services Section -->
-        <section class="page-section" id="services" style="padding: 1rem 0 1.5rem 0; margin-bottom: 0; background-color: #F0E6D2;">
+        <section class="page-section" id="services" style="padding: 1rem 0 0 0; margin-bottom: 0 !important; background-color: #F0E6D2;">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-heading">
@@ -1113,7 +1113,8 @@
                                     <p class="mb-4" style="font-size: 1.1rem; font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;"><span data-en="Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness." data-sv="Upplev den djupgående läkande kraften hos Spinal Energetics, en mild praktik som arbetar med din kropps naturliga intelligens för att frigöra lagrad spänning och trauma. Detta tillvägagångssätt hjälper till att återställa flöde och vitalitet genom din ryggrad och ditt nervsystem, vilket främjar djup läkning på fysiska, emotionella och energetiska nivåer. Låt din kropp varva ner och hitta sitt naturliga tillstånd av balans och välbefinnande.">Experience the profound healing power of Spinal Energetics, a gentle practice that works with your body's natural intelligence to release stored tension and trauma. This approach helps restore flow and vitality through your spine and nervous system, promoting deep healing on physical, emotional, and energetic levels. Allow your body to unwind and find its natural state of balance and wellness.</span></p>
                                     <p class="mb-4" style="font-size: 1.1rem; font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;"><span data-en="Available in both individual sessions and special package deals for deeper transformation." data-sv="Tillgängligt i både individuella sessioner och specialpaket för djupare transformation.">Available in both individual sessions and special package deals for deeper transformation.</span></p>
                                     <div class="d-flex flex-wrap gap-3 justify-content-center">
-                                        <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://peach.nu/activities/QWPOUhx6QWuIvJ4lcbDy"><span data-en="Book Session ONLINE" data-sv="Boka session ONLINE">Book Session ONLINE</span></a></div>
+                                        <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://www.bokadirekt.se/places/holistisk-halsa-naprapati-133861" target="_blank"><span data-en="Book Session ONLINE" data-sv="Boka session ONLINE">Book Session ONLINE</span></a></div>
+                                        <div class="intro-button"><a class="btn btn-primary btn-lg" href="https://www.bokadirekt.se/places/holistisk-halsa-naprapati-133861" target="_blank"><span data-en="Book In-Person" data-sv="Boka på plats">Book In-Person</span></a></div>
                                         <div class="intro-button"><a class="btn btn-outline-secondary btn-lg" href="spinal-energetics-details.html"><span data-en="Read More" data-sv="Läs mer">Read More</span></a></div>
                                     </div>
                                 </div>
@@ -1182,11 +1183,10 @@
             
             
             <!-- Full width image with text overlay - outside container -->
-            <div class="w-100 position-relative" id="cacao-ceremonies" style="margin-bottom: 0.5rem;">
-                <!-- Mobile title (hidden on desktop) -->
-                <div class="d-block d-md-none text-center mb-3">
+            <div class="w-100 position-relative" id="cacao-ceremonies" style="margin-bottom: 0;">
+                <div class="d-block d-md-none text-center mb-3" style="background-color: #F0E6D2;">
                 </div>
-                <img class="img-fluid w-100" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" style="height: calc(80vh + 6rem); object-fit: cover;" loading="lazy" />
+                <img class="img-fluid w-100" src="assets/img/cacao-ceremony.jpg" alt="Cacao Ceremony" style="height: calc(80vh + 6rem); object-fit: cover; display: block;" loading="lazy" />
                 
                 <!-- Text overlay positioned over the image -->
                 <div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top: 2rem;">
@@ -1208,11 +1208,10 @@
                     </div>
                 </div>
             </div>
-            
         </section>
-        
+
         <!-- About Me Section -->
-        <section class="page-section" id="about" style="padding: 2rem 0 5rem 0; margin-top: 0.5rem; background-color: #6b7c5d;">
+        <section class="page-section" id="about" style="padding: 2rem 0 5rem 0; margin-top: 0 !important; margin-bottom: 0 !important; background-color: #6b7c5d;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 mx-auto">
@@ -1226,7 +1225,7 @@
                             
                             <!-- Profile Image -->
                             <div class="text-center mb-4">
-                                <img src="assets/img/lina-profile.jpg" alt="Lina" class="img-fluid rounded-circle shadow" style="max-width: 400px; width: 400px; height: 400px; object-fit: cover; object-position: center 30%; transform: scale(0.8);" loading="lazy">
+                                <img src="assets/img/lina-profile.jpg" alt="Lina, licensed naprapath and energy healer at Soulrise Studio" class="img-fluid rounded-circle shadow" style="max-width: 400px; width: 400px; height: 400px; object-fit: cover; object-position: center 30%; transform: scale(0.8);" loading="lazy">
                                 <h4 class="mt-3" style="color: #8B7355; font-weight: 400; font-style: italic;">
                                     <span data-en="Hi, I'm Lina" data-sv="Hej, jag heter Lina">Hi, I'm Lina</span>
                                 </h4>
@@ -1248,7 +1247,7 @@
                                             </span>
                                         </p>
                                         
-                                        <p class="mb-4" style="color: #5a4a3a; text-align: left; font-size: 1.1rem;">
+                                        <p class="mb-4 mt-3" style="color: #5a4a3a; text-align: left; font-size: 1.1rem;">
                                             <span data-en="On a personal note, I am a mother of two sons and currently split my time between Spain and Sweden, which enriches both my life and my healing practice." data-sv="På ett personligt plan är jag mamma till två söner och delar för närvarande min tid mellan Spanien och Sverige, vilket berikar både mitt liv och mitt arbete.">
                                                 On a personal note, I am a mother of two sons and currently split my time between Spain and Sweden, bringing a multicultural perspective to my healing work.
                                             </span>
@@ -1279,6 +1278,41 @@
             </div>
         </section>
         
+        <!-- Client Love Section -->
+        <section class="page-section" id="testimonials" style="padding: 3rem 0 5rem 0; margin-top: 0; background-color: #faf0e6;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading">
+                        <span class="section-heading-lower" style="color: #2F170F; font-size: 2.5rem;">Client Love</span>
+                    </h2>
+                    <p class="text-muted mt-3" data-en="Words from beautiful souls" data-sv="Ord från vackra själar">Words from beautiful souls</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-4 h-100 rounded-3 shadow-sm" style="background: white; border: 1px solid #e6a756;">
+                            <div class="mb-3" style="color: #e6a756; font-size: 1.5rem;">&#10077;</div>
+                            <p class="fst-italic mb-3" style="color: #5a4a3a;" data-en="I find it hard to relax as my nervous system is constantly on high alert. With Lina's spinal energetics I have felt more relaxed than I thought was possible. I also always feel completely safe with Lina which feels important." data-sv="Har svårt att koppla av då mitt nervsystem går på helvarv. Med Linas spinal energetics har jag känt mig mer avslappnad än jag trodde var möjligt. Dessutom känner jag mig alltid helt trygg med Lina vilket känns viktigt.">Har svårt att koppla av då mitt nervsystem går på helvarv. Med Linas spinal energetics har jag känt mig mer avslappnad än jag trodde var möjligt. Dessutom känner jag mig alltid helt trygg med Lina vilket känns viktigt.</p>
+                            <p class="fw-bold mb-0" style="color: #a69073;">— Linda</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 h-100 rounded-3 shadow-sm" style="background: white; border: 1px solid #e6a756;">
+                            <div class="mb-3" style="color: #e6a756; font-size: 1.5rem;">&#10077;</div>
+                            <p class="fst-italic mb-3" style="color: #5a4a3a;" data-en="After several sessions with Lina I feel a clear difference in my body. She holds a very safe and allowing space where nothing needs to be performed, you just get to be and let the process happen. Warmly recommended to anyone who wants to release tension, connect deeper with their body and give themselves a moment of true recovery and healing 🤍" data-sv="Efter flera sessioner med Lina känner jag en tydlig skillnad i kroppen. Hon håller ett väldigt tryggt och tillåtande space där inget behöver presteras, du får bara vara och låta processen ske. Rekommenderas varmt till alla som vill släppa spänningar, komma djupare i kontakt med kroppen och ge sig själv en stund av verklig återhämtning och läkning 🤍">Efter flera sessioner med Lina känner jag en tydlig skillnad i kroppen. Hon håller ett väldigt tryggt och tillåtande space där inget behöver presteras, du får bara vara och låta processen ske. Rekommenderas varmt till alla som vill släppa spänningar, komma djupare i kontakt med kroppen och ge sig själv en stund av verklig återhämtning och läkning 🤍</p>
+                            <p class="fw-bold mb-0" style="color: #a69073;">— Yvette</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 h-100 rounded-3 shadow-sm" style="background: white; border: 1px solid #e6a756;">
+                            <div class="mb-3" style="color: #e6a756; font-size: 1.5rem;">&#10077;</div>
+                            <p class="fst-italic mb-3" style="color: #5a4a3a;" data-en="I came in feeling lost and left feeling like I had come home to myself. Lina creates the most beautiful space for healing and transformation." data-sv="Jag kom in vilsen och lämnade med känslan av att ha kommit hem till mig själv. Lina skapar det vackraste utrymmet för läkning och transformation.">I came in feeling lost and left feeling like I had come home to myself. Lina creates the most beautiful space for healing and transformation.</p>
+                            <p class="fw-bold mb-0" style="color: #a69073;">— J.L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="page-section cta" id="contact">
             <div class="container">
@@ -1297,45 +1331,96 @@
                             <div class="d-flex align-items-center my-5">
                                 <div class="flex-grow-1" style="height: 2px; background: linear-gradient(to right, transparent, #e6a756, transparent);"></div>
                                 <div class="px-4">
-                                    <i class="fas fa-heart" style="color: #e6a756; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-heart" style="color: #e6a756; font-size: 1.5rem;" aria-hidden="true"></i>
                                 </div>
                                 <div class="flex-grow-1" style="height: 2px; background: linear-gradient(to right, transparent, #e6a756, transparent);"></div>
                             </div>
                             
-                            <!-- Contact Information -->
+                            <!-- Journey Packages -->
                             <div class="mb-5">
-                                <div class="row g-4 mb-4">
+                                <h4 class="mb-4" style="color: #2F170F;">
+                                    <span data-en="Your Next Step" data-sv="Ditt nästa steg">Your Next Step</span>
+                                </h4>
+                                <div class="row g-3">
                                     <div class="col-md-6">
-                                        <div class="contact-item p-4 h-100 rounded-3" style="background: rgba(255, 255, 255, 0.7); border: 1px solid #e6a756; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(230, 167, 86, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                            <div class="mb-3">
-                                                <i class="fas fa-envelope fa-2x" style="color: #e6a756;"></i>
-                                            </div>
-                                            <h5 class="text-primary mb-3" style="color: #8B7355 !important;">Email</h5>
-                                            <p class="mb-3 fw-bold" style="color: #2F170F;">lina.w.love@gmail.com</p>
-                                            <a href="mailto:lina.w.love@gmail.com" class="btn btn-outline-primary" style="border: 2px solid #8B7355; color: #8B7355; border-radius: 25px;">
-                                                <span data-en="Send Email" data-sv="Skicka Email">Send Email</span>
+                                        <div class="p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.7); border: 1px solid #e6a756;">
+                                            <h5 style="color: #a69073;" data-en="Soul Remembrance Journey" data-sv="Soul Remembrance Journey">Soul Remembrance Journey</h5>
+                                            <p class="mb-1 text-muted"><span data-en="Personal Journey — 8-12 weeks" data-sv="Personlig resa — 8-12 veckor">Personal Journey — 8-12 weeks</span></p>
+                                            <p class="fw-bold mb-2" style="color: #2F170F; font-size: 1.3rem;">7 500 kr</p>
+                                            <a href="mailto:lina.w.love@gmail.com?subject=Soul Remembrance Journey&body=Hi Lina,%0A%0AI'm interested in the Soul Remembrance Journey. Could you send me more details?%0A%0AThank you!" class="btn btn-sm btn-outline-primary" style="border: 2px solid #8B7355; color: #8B7355; border-radius: 25px;">
+                                                <span data-en="Get Details" data-sv="Få detaljer">Get Details</span>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="contact-item p-4 h-100 rounded-3" style="background: rgba(255, 255, 255, 0.7); border: 1px solid #e6a756; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(230, 167, 86, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                            <div class="mb-3">
-                                                <i class="fab fa-whatsapp fa-2x" style="color: #e6a756;"></i>
-                                            </div>
-                                            <h5 class="text-primary mb-3" style="color: #8B7355 !important;">Phone</h5>
-                                            <p class="mb-3 fw-bold" style="color: #2F170F;">+46 70 295 65 14</p>
-                                            <a href="https://wa.me/46702956514" class="btn btn-outline-primary" target="_blank" style="border: 2px solid #8B7355; color: #8B7355; border-radius: 25px;">
-                                                <span data-en="WhatsApp" data-sv="WhatsApp">WhatsApp</span>
+                                        <div class="p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.7); border: 1px solid #e6a756;">
+                                            <h5 style="color: #6b7c5d;" data-en="Source Connection Journey" data-sv="Source Connection Journey">Source Connection Journey</h5>
+                                            <p class="mb-1 text-muted"><span data-en="Group Journey — 8 weeks" data-sv="Gruppresa — 8 veckor">Group Journey — 8 weeks</span></p>
+                                            <p class="fw-bold mb-2" style="color: #2F170F; font-size: 1.3rem;">3 300 kr</p>
+                                            <a href="https://peach.nu/activities/HzyyLL8Pg5HjhvKteCFO" class="btn btn-sm btn-outline-primary" target="_blank" style="border: 2px solid #8B7355; color: #8B7355; border-radius: 25px;">
+                                                <span data-en="Join Next Group" data-sv="Gå med i nästa grupp">Join Next Group</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Single Session Booking -->
+                            <div class="mb-4 text-center">
+                                <p class="mb-2" style="color: #5a4a3a;">
+                                    <span data-en="Want to book a single session?" data-sv="Vill du boka en enskild session?">Want to book a single session?</span>
+                                </p>
+                                <a href="#services" class="btn btn-sm btn-outline-primary" style="border: 2px solid #8B7355; color: #8B7355; border-radius: 25px;">
+                                    <span data-en="Browse & Book Sessions" data-sv="Se & boka sessioner">Browse & Book Sessions</span>
+                                </a>
+                            </div>
+
+                            <!-- Decorative Divider -->
+                            <div class="d-flex align-items-center mb-5">
+                                <div class="flex-grow-1" style="height: 2px; background: linear-gradient(to right, transparent, #e6a756, transparent);"></div>
+                                <div class="px-4">
+                                    <i class="fas fa-envelope" style="color: #e6a756; font-size: 1.2rem;" aria-hidden="true"></i>
+                                </div>
+                                <div class="flex-grow-1" style="height: 2px; background: linear-gradient(to right, transparent, #e6a756, transparent);"></div>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="mb-5">
+                                <form action="https://formsubmit.co/lina.w.love@gmail.com" method="POST" class="text-start p-4 rounded-3" style="background: rgba(255, 255, 255, 0.7); border: 1px solid #e6a756; max-width: 600px; margin: 0 auto;">
+                                    <input type="hidden" name="_subject" value="New message from Soul Rise Studio website">
+                                    <input type="hidden" name="_captcha" value="true">
+                                    <input type="text" name="_honey" style="display:none" aria-hidden="true" tabindex="-1">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold" style="color: #2F170F;">
+                                            <span data-en="Name" data-sv="Namn">Name</span>
+                                        </label>
+                                        <input type="text" name="name" class="form-control" required style="border: 1px solid #e6a756; border-radius: 10px;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold" style="color: #2F170F;">
+                                            <span data-en="Email" data-sv="Email">Email</span>
+                                        </label>
+                                        <input type="email" name="email" class="form-control" required style="border: 1px solid #e6a756; border-radius: 10px;">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold" style="color: #2F170F;">
+                                            <span data-en="Message" data-sv="Meddelande">Message</span>
+                                        </label>
+                                        <textarea name="message" class="form-control" rows="4" required style="border: 1px solid #e6a756; border-radius: 10px;"></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5" style="background: linear-gradient(45deg, #e6a756, #f4c571); border: none; border-radius: 50px; color: #2F170F; font-weight: 600;">
+                                            <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>
+                                            <span data-en="Send Message" data-sv="Skicka meddelande">Send Message</span>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                             
                             <!-- Community Section -->
                             <div class="community-section p-4 rounded-3" style="background: rgba(230, 167, 86, 0.1); border: 2px dashed #e6a756;">
                                 <div class="mb-3">
-                                    <i class="fas fa-users fa-2x" style="color: #e6a756;"></i>
+                                    <i class="fas fa-users fa-2x" style="color: #e6a756;" aria-hidden="true"></i>
                                 </div>
                                 <h4 class="mb-3" style="color: #2F170F;">
                                     Community
@@ -1344,7 +1429,7 @@
                                     <span data-en="Connect and stay updated with news and offers" data-sv="Anslut och håll dig uppdaterad med nyheter och erbjudanden">Connect and stay updated with news and offers</span>
                                 </p>
                                 <a href="https://chat.whatsapp.com/HNXZ2CZYXxYFR9FMo2dBQt" class="btn btn-primary btn-lg px-4 py-3 shadow" target="_blank" style="background: linear-gradient(45deg, #e6a756, #f4c571); border: none; border-radius: 50px; color: #2F170F; font-weight: 600;">
-                                    <i class="fab fa-whatsapp me-2"></i>
+                                    <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
                                     <span data-en="Join Community" data-sv="Gå med">Join Community</span>
                                 </a>
                             </div>
@@ -1358,8 +1443,8 @@
         <footer class="footer text-faded text-center py-5">
             <div class="container">
                 <div class="mb-3">
-                    <a href="https://www.instagram.com/soulrise.bylina?igsh=bnEwZHdrdGNjMGF3&utm_source=qr" target="_blank" class="text-decoration-none">
-                        <i class="fab fa-instagram" style="font-size: 2rem; color: #e6a756;"></i>
+                    <a href="https://www.instagram.com/soulrise.bylina?igsh=bnEwZHdrdGNjMGF3&utm_source=qr" target="_blank" class="text-decoration-none" aria-label="Follow Soulrise Studio on Instagram">
+                        <i class="fab fa-instagram" style="font-size: 2rem; color: #e6a756;" aria-hidden="true"></i>
                     </a>
                 </div>
                 <p class="m-0 small">Copyright &copy; Soulrise Studio 2023</p>
